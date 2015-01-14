@@ -5,7 +5,6 @@
 
 var $ = window.$ = require('jquery');
 var CodeMirror = window.CodeMirror = require('codemirror');
-// var TimelineMax = window.TimelineMax = require('../../node_modules/gsap/src/minified/TimelineMax.min.js');
 
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/htmlmixed/htmlmixed');
@@ -20,8 +19,6 @@ $(document).ready(function () {
       theme: 'ambiance'
     });
   });
-
-  // TimelineMax.staggerTo('nav li', 1, { rotation: 30, y: 100 }, 0.5);
 
 });
 

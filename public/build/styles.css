@@ -967,6 +967,13 @@ Pagination Styles
   border-radius: 0 0.1875rem 0.1875rem 0;
 }
 
+.panel {
+  padding: 1.25rem;
+  border: 0.0625rem solid #d8d4c7;
+  background: white;
+  border-radius: 0.625rem;
+}
+
 /*
  * Deafult Theme - Lost My Name (lmn)
  *========================================
