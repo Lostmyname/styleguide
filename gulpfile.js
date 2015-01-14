@@ -71,7 +71,7 @@ gulp.task('default', ['js', 'scss', 'fileinclude'], function () {
     server: {
       baseDir: '.'
     },
-    startPath: '/public/button.html',
+    startPath: '/public/grid.html',
     ghostMode: {
       scroll: false,
       links: false,
