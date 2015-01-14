@@ -17,6 +17,7 @@
     "lmn.jester.component.tab": "*",
     "lmn.jester.component.gallery": "*",
     "lmn.jester.component.panel": "*",
+    "lmn.jester.component.switch": "*",
     "lmn.jester.theme.lmn": "*",
     "lmn.jester.theme.styleguide": "*"
   },

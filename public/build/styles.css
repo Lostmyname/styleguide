@@ -912,6 +912,83 @@ Pagination Styles
     height: 9.375rem;
   }
 }
+.gender-switch {
+  width: 100%;
+}
+
+.gender-switch-option {
+  position: relative;
+  width: 50%;
+  height: 2.5rem;
+  display: block;
+  float: left;
+}
+.gender-switch-option .face {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  right: -0.9375rem;
+  filter: grayscale(20%);
+  height: 220%;
+}
+.gender-switch-option .face img {
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media all and (max-width: 1024px) {
+  .gender-switch-option .face {
+    display: none;
+  }
+}
+@media all and (max-width: 992px) {
+  .gender-switch-option .face {
+    display: block;
+    right: 0;
+    width: 4.8rem;
+    height: 140%;
+  }
+}
+.gender-switch-option label {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 0.8125rem !important;
+  overflow: visible !important;
+  font-weight: bold !important;
+  font-size: 1.125rem;
+  background: #cccccc;
+  text-transform: uppercase;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.gender-switch-option label[lang="de"] .gender-switch-option label {
+  font-size: 0.6875rem;
+  line-height: 2.8125rem;
+}
+.gender-switch-option input {
+  position: absolute;
+  opacity: 0;
+}
+.gender-switch-option input:checked + label {
+  background: #dddddd;
+  color: white;
+}
+.gender-switch-option input:checked + label .face {
+  filter: grayscale(0);
+}
+.gender-switch-option:first-child {
+  padding-right: 0.125rem;
+}
+.gender-switch-option:first-child label {
+  border-radius: 0.1875rem 0 0 0.1875rem;
+}
+.gender-switch-option:last-child label {
+  border-radius: 0 0.1875rem 0.1875rem 0;
+}
+
 /*
  * Deafult Theme - Lost My Name (lmn)
  *========================================
@@ -2196,14 +2273,15 @@ hr {
   background-color: #01b69b;
 }
 
+.gender-switch-option input:checked + label {
+  background: #01b69b;
+}
+
 /*
  * Sub Theme - Styleguide
  *========================================
  */
 .theme-styleguide {
-  /*
-   * Layout
-   */
   /*
    * Colours
    */
@@ -2222,6 +2300,28 @@ hr {
 }
 .theme-styleguide .code-block pre {
   font-style: normal;
+}
+.theme-styleguide .demo-grid .row {
+  margin-bottom: 5px;
+}
+.theme-styleguide .demo-grid .col {
+  background-color: #d8d4c7;
+}
+.theme-styleguide .demo-grid .col > div {
+  background-color: #01b69b;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.theme-styleguide .nav {
+  height: 100%;
+  z-index: 1;
+  background-color: #222222;
+}
+.theme-styleguide .nav .nav-heading {
+  color: white;
 }
 
 /*
@@ -3324,6 +3424,9 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 }
 .theme-default .swiper-active-switch {
   background-color: #01b69b;
+}
+.theme-default .gender-switch-option input:checked + label {
+  background: #01b69b;
 }
 
 /*
