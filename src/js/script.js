@@ -9,6 +9,7 @@ require('codemirror/mode/xml/xml');
 require('codemirror/mode/htmlmixed/htmlmixed');
 
 $(document).ready(function () {
+
   $.each($('.code-textarea'), function (i, el) {
     CodeMirror.fromTextArea(el, {
       lineNumbers: true,
@@ -17,4 +18,5 @@ $(document).ready(function () {
       theme: 'ambiance'
     });
   });
+
 });

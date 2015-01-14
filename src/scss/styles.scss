@@ -15,7 +15,7 @@ $supports-box-shadow: true !default;
  * ff declarations up here 
  *
  */
-@import "../../node_modules/lmn.jester.theme.lmn/src/base/typography/font-face";
+@import "../../node_modules/lmn.jester.theme.default/src/base/typography/font-face";
 
 
 
@@ -24,7 +24,7 @@ $supports-box-shadow: true !default;
  *========================================
  */
 @import "../../node_modules/lmn.jester.helper/sass/functions";
-@import "../../node_modules/lmn.jester.theme.lmn/src/variables";
+@import "../../node_modules/lmn.jester.theme.default/src/variables";
 @import "../../node_modules/lmn.jester.helper/sass/mixins";
 
 
@@ -53,7 +53,7 @@ $supports-box-shadow: true !default;
  *========================================
  */
 
-@import "../../node_modules/lmn.jester.theme.lmn/src/jester.theme.lmn";
+@import "../../node_modules/lmn.jester.theme.default/src/jester.theme.lmn";
 
 
 
@@ -73,9 +73,9 @@ $supports-box-shadow: true !default;
  *========================================
  */
 
-.theme-default {
-  @import "../../node_modules/lmn.jester.theme.lmn/src/jester.theme.lmn";
-}
+// .theme-default {
+//   @import "../../node_modules/lmn.jester.theme.default/src/jester.theme.lmn";
+// }
 
 
 

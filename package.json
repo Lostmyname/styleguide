@@ -8,6 +8,7 @@
     "browserify": "^6.2.0",
     "jquery": "^2.1.1",
     "codemirror": "^4.11.0",
+    "gsap": "^1.15.0",
     "lmn.tarantula": "*",
     "lmn.jester.helper": "*",
     "lmn.jester.component.colour": "*",
@@ -18,7 +19,7 @@
     "lmn.jester.component.gallery": "*",
     "lmn.jester.component.panel": "*",
     "lmn.jester.component.switch": "*",
-    "lmn.jester.theme.lmn": "*",
+    "lmn.jester.theme.default": "*",
     "lmn.jester.theme.styleguide": "*"
   },
   "devDependencies": {

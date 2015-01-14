@@ -5,11 +5,13 @@
 
 var $ = window.$ = require('jquery');
 var CodeMirror = window.CodeMirror = require('codemirror');
+// var TimelineMax = window.TimelineMax = require('../../node_modules/gsap/src/minified/TimelineMax.min.js');
 
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/htmlmixed/htmlmixed');
 
 $(document).ready(function () {
+
   $.each($('.code-textarea'), function (i, el) {
     CodeMirror.fromTextArea(el, {
       lineNumbers: true,
@@ -18,6 +20,9 @@ $(document).ready(function () {
       theme: 'ambiance'
     });
   });
+
+  // TimelineMax.staggerTo('nav li', 1, { rotation: 30, y: 100 }, 0.5);
+
 });
 
 },{"codemirror":2,"codemirror/mode/htmlmixed/htmlmixed":4,"codemirror/mode/xml/xml":6,"jquery":7}],2:[function(require,module,exports){
