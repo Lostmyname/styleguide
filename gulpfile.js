@@ -50,7 +50,7 @@ gulp.task('scss', function () {
 
 
 gulp.task('fileinclude', function() {
-  gulp.src('./src/html/*.html')
+  gulp.src('./src/html/**/*.html')
     .pipe(plugins.fileInclude({
       prefix: '@@',
       basepath: '@file'

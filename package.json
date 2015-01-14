@@ -7,7 +7,18 @@
   "dependencies": {
     "browserify": "^6.2.0",
     "jquery": "^2.1.1",
-    "codemirror": "^4.11.0"
+    "codemirror": "^4.11.0",
+    "lmn.tarantula": "*",
+    "lmn.jester.helper": "*",
+    "lmn.jester.component.colour": "*",
+    "lmn.jester.component.button": "*",
+    "lmn.jester.component.divider": "*",
+    "lmn.jester.component.swiper": "*",
+    "lmn.jester.component.tab": "*",
+    "lmn.jester.component.gallery": "*",
+    "lmn.jester.component.panel": "*",
+    "lmn.jester.theme.lmn": "*",
+    "lmn.jester.theme.styleguide": "*"
   },
   "devDependencies": {
     "browser-sync": "^1.5.1",
@@ -25,10 +36,7 @@
     "mocha": "^2.0.1",
     "should": "^4.2.0",
     "vinyl-source-stream": "^1.0.0",
-    "gulp-file-include": "^0.7.1",
-
-    "lmn.jester.helper": "^0.0.1",
-    "lmn.jester.all": "*"
+    "gulp-file-include": "^0.7.1"
   },
   "license": "MIT"
 }
