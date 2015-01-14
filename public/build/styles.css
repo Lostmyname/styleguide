@@ -2335,7 +2335,7 @@ hr {
   background: #d8d4c7;
   color: #222222;
   padding: 10px;
-  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 8px;
   font-weight: bold;
 }
 .theme-styleguide .nav li > a:hover {
