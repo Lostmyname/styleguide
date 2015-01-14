@@ -2323,6 +2323,25 @@ hr {
 .theme-styleguide .nav .nav-heading {
   color: white;
 }
+.theme-styleguide .nav ul {
+  padding-left: 0;
+}
+.theme-styleguide .nav li {
+  display: block;
+  margin: 0 0 1px 2px;
+}
+.theme-styleguide .nav li > a {
+  display: block;
+  background: #d8d4c7;
+  color: #222222;
+  padding: 10px;
+  border-bottom-right-radius: 5px;
+  font-weight: bold;
+}
+.theme-styleguide .nav li > a:hover {
+  text-decoration: none;
+  background: white;
+}
 
 /*
  * Sub Theme - Lost My Name (lmn)
