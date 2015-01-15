@@ -4,9 +4,9 @@
 
 var $ = window.$ = require('jquery');
 var CodeMirror = window.CodeMirror = require('codemirror');
-
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/htmlmixed/htmlmixed');
+require('../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper');
 
 $(document).ready(function () {
 
