@@ -41,20 +41,62 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col col-lg-12">
-        <h1 class="h2 xl-mar-b">Panel Component</h1>
+        <h1 class="h2 xl-mar-b">Collapsible Component</h1>
 
         <div class="row  lg-mar-b">
           <div class="col col-lg-6">
-            <section class="theme-default  components  md-mar-b">
+            <section class="components  md-mar-b" >
                 
-                <div class="panel">This is a panel</div>
+              <div class="collapsible md-mar-b">
+                <a href="#" class="collapsible-toggle">
+                  This will toggle the collapsible area
+                </a>
+                <div class="collapsible-content">
+                  <p>The content that is hidden and shown.</p>
+                </div>
+              </div>
+
+              <div class="collapsible md-mar-b">
+                <a href="#" class="collapsible-toggle">
+                  This will toggle the collapsible area
+                </a>
+                <div class="collapsible-content">
+                  <p>The content that is hidden and shown.</p>
+                </div>
+              </div>
+
+              <div class="collapsible md-mar-b">
+                <a href="#" class="collapsible-toggle">
+                  This will toggle the collapsible area
+                </a>
+                <div class="collapsible-content">
+                  <p>The content that is hidden and shown.</p>
+                </div>
+              </div>
 
             </section>
           </div>
           <div class="col col-lg-6">
             <div class="code-block  xl-mar-b">
-<textarea name="" id="code-colours" class="code-textarea" data-mode="text/html" data-height="50"  cols="20" rows="8">
-<div class="panel">This is a panel</div>
+              <h3 class="h5">HTML</h3>
+              <textarea name="" id="code-colours" class="code-textarea" data-mode="text/html" data-height="200" cols="20" rows="8">
+<div class="collapsible">
+  <a href="#" class="collapsible-toggle">
+    This will toggle the collapsible area
+  </a>
+  <div class="collapsible-content">
+    <p>The content that is hidden and shown.</p>
+  </div>
+</div>
+</textarea>
+              <h3 class="h5 md-mar-t">JS</h3>
+              <textarea name="" id="code-colours" class="code-textarea" data-mode="text/javascript" data-height="200" cols="20" rows="8">
+var Collapsible = require('../../node_modules/lmn.jester.component.collapsible/src/js/jester.component.collapsible');
+
+$.each($('.collapsible'), function (i, el) {
+  var $el = $(el);
+  this.collapsible = new Collapsible(el);
+});
 </textarea>
             </div>
           </div>  
