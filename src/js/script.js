@@ -6,17 +6,30 @@ var $ = window.$ = require('jquery');
 var CodeMirror = window.CodeMirror = require('codemirror');
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/htmlmixed/htmlmixed');
+require('codemirror/mode/javascript/javascript');
 require('../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper');
+var Video = require('../../node_modules/lmn.jester.component.video/src/js/jester.component.video');
 
 $(document).ready(function () {
 
   $.each($('.code-textarea'), function (i, el) {
-    CodeMirror.fromTextArea(el, {
+    var $el = $(el);
+    var cm = CodeMirror.fromTextArea(el, {
       lineNumbers: true,
-      mode: 'text/html',
+      mode: $el.attr('data-mode') || 'text/html',
       matchBrackets: true,
       theme: 'ambiance'
     });
+
+    var height = $el.attr('data-height');
+    if (height) {
+      $(cm.display.wrapper).height(height);
+    }
   });
+
+  var $video = $('#video');
+  if ($video.length > 0) {
+    this.video = new Video('video');
+  }
 
 });

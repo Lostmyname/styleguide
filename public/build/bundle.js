@@ -7,22 +7,35 @@ var $ = window.$ = require('jquery');
 var CodeMirror = window.CodeMirror = require('codemirror');
 require('codemirror/mode/xml/xml');
 require('codemirror/mode/htmlmixed/htmlmixed');
+require('codemirror/mode/javascript/javascript');
 require('../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper');
+var Video = require('../../node_modules/lmn.jester.component.video/src/js/jester.component.video');
 
 $(document).ready(function () {
 
   $.each($('.code-textarea'), function (i, el) {
-    CodeMirror.fromTextArea(el, {
+    var $el = $(el);
+    var cm = CodeMirror.fromTextArea(el, {
       lineNumbers: true,
-      mode: 'text/html',
+      mode: $el.attr('data-mode') || 'text/html',
       matchBrackets: true,
       theme: 'ambiance'
     });
+
+    var height = $el.attr('data-height');
+    if (height) {
+      $(cm.display.wrapper).height(height);
+    }
   });
+
+  var $video = $('#video');
+  if ($video.length > 0) {
+    this.video = new Video('video');
+  }
 
 });
 
-},{"../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper":9,"codemirror":2,"codemirror/mode/htmlmixed/htmlmixed":4,"codemirror/mode/xml/xml":6,"jquery":7}],2:[function(require,module,exports){
+},{"../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper":9,"../../node_modules/lmn.jester.component.video/src/js/jester.component.video":10,"codemirror":2,"codemirror/mode/htmlmixed/htmlmixed":4,"codemirror/mode/javascript/javascript":5,"codemirror/mode/xml/xml":6,"jquery":7}],2:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
@@ -19224,4 +19237,70 @@ $(document).on(window.READY || 'ready', function () {
   swiper.initSwiper();
 });
 
-},{"../../node_modules/swiper/dist/idangerous.swiper.min.js":8,"jquery":7}]},{},[1]);
+},{"../../node_modules/swiper/dist/idangerous.swiper.min.js":8,"jquery":7}],10:[function(require,module,exports){
+window.Video = module.exports = (function () {
+  'use strict';
+
+  /**
+   * Video component constructor
+   * @param {String} el
+   * @param {Object} options
+   */
+  function Component(elID, options) {
+    var that = this;
+    this.elID = elID;
+    this.$el = $('#' + elID);
+    this.options = options || {
+      width: 1280,
+      height: 540,
+      videoId: 'C7OdgQKRCOI'
+    };
+
+    var tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    window.onYouTubeIframeAPIReady = function () {
+      that.onYouTubeIframeAPIReady();
+    };
+  }
+
+  /**
+   * Create a youtube player instance once the youtube API is ready
+   */
+  Component.prototype.onYouTubeIframeAPIReady = function () {
+    var that = this;
+
+    var YT = window.YT || undefined;
+
+    if (YT !== undefined) {
+      new YT.Player(this.elID, {
+        width: that.options.width,
+        height: that.options.height,
+        videoId: that.options.videoId,
+        playerVars: {
+          autohide: 2,
+          showinfo: 0,
+          rel: 0
+        },
+        events: {
+          onReady: function () {
+            console.log('onReady');
+            that.$el.addClass('player');
+          },
+          onStateChange: function (e) {
+            console.log('onStateChange');
+            if (e.data === YT.PlayerState.PLAYING) {
+              that.$el.trigger('playing');
+            }
+          }
+        }
+      });
+    }
+  };
+
+  return Component;
+})();
+
+},{}]},{},[1]);
