@@ -35,7 +35,6 @@ $(document).ready(function () {
   }
 
   $.each($('.collapsible'), function (i, el) {
-    var $el = $(el);
     this.collapsible = new Collapsible(el);
   });
 
