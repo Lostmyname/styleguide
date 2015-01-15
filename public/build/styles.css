@@ -2218,6 +2218,15 @@ hr {
   height: 100px;
   background-color: #e87117;
 }
+.theme-styleguide .demo-padding .box {
+  display: inline-block;
+  background-color: #d8d4c7;
+}
+.theme-styleguide .demo-padding .box > div {
+  width: 100px;
+  height: 100px;
+  background-color: #01b69b;
+}
 .theme-styleguide .nav {
   height: 100%;
   z-index: 1;
