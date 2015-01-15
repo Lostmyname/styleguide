@@ -4,42 +4,48 @@
     <div class="row">
       <div class="col col-lg-12 theme-default  components">
 
-        <h1 class="h2">Padding</h1>
+        <h1 class="h2">Border</h1>
 
         <article class="lg-mar-t lg-pad-b">
-          <p class="lg-mar-t">Padding classes follow the following syntax:</p>
+          <p class="lg-mar-t">Border classes follow the following syntax:</p>
           <p class="h4">size - type - [direction] - [media-query]</p>
         </article>
 
         <article class="lg-pad-b">
           <p>
             <strong>size</strong> - Seven options definied in variables: <strong>xxl, xl, lg, md, sm, xs, xxs or no for none</strong><br />
-            <strong>type</strong> - For padding this is <strong>par</strong><br />
-            <strong>direction</strong> - Direction the padding should be applied: <strong>t, r, b, l</strong> (optional)<br />
+            <strong>type</strong> - For border this is <strong>bor</strong><br />
+            <strong>direction</strong> - Direction the border should be applied: <strong>t, r, b, l</strong> (optional)<br />
             <strong>media-query</strong> - Breakpoint below which the class is active: <strong>lg, md, sm, xs</strong> (optional)<br />
+          </p>
+        </article>
+
+        <h2 class="h3">Styling</h1>
+
+        <article class="lg-pad-b">
+          <p>
+            Styling the borders (i.e. colour and style) should be done inside a compoenent.
           </p>
         </article>
 
         <h2 class="h3">Examples</h1>
 
-        <section class="demo-padding lg-mar-t">
+        <section class="demo-border lg-mar-t">
           
           <div class="container-fluid">
 
             <div class="row lg-mar-b">
 
               <div class="example display-inline lg-mar-r">
-                <div class="box lg-pad">
-                  <div></div>
-                </div>
-                .lg-pad
+                <div class="box lg-bor"></div>
+                .lg-bor
               </div>
 
               <div class="example display-inline lg-mar-r">
-                <div class="box sm-pad">
+                <div class="box sm-bor">
                   <div></div>
                 </div>
-                .sm-pad
+                .sm-bor
               </div>
             </div>
 
@@ -47,24 +53,24 @@
 
             <div class="row lg-mar-b">
               <div class="example display-inline lg-mar-r">
-                <div class="box lg-pad-l">
+                <div class="box no-bor lg-bor-l">
                   <div></div>
                 </div>
-                .lg-pad-l
+                .no-bor .lg-bor-l
               </div>
 
               <div class="example display-inline lg-mar-r">
-                <div class="box lg-pad-r">
+                <div class="box no-bor lg-bor-r">
                   <div></div>
                 </div>
-                .lg-pad-r
+                .no-bor .lg-bor-r
               </div>
 
               <div class="example display-inline lg-mar-r">
-                <div class="box lg-pad-l lg-pad-r lg-pad-b">
+                <div class="box no-bor lg-bor-l lg-bor-r lg-bor-b">
                   <div></div>
                 </div>
-                .lg-pad-l .lg-pad-r .lg-pad-b
+                .no-bor .lg-bor-l .lg-bor-r .lg-bor-b
               </div>
             </div>
 
@@ -72,10 +78,10 @@
 
             <div class="row lg-mar-b">
               <div class="example display-inline lg-mar-r">
-                <div class="box xl-pad lg-pad-on-md md-pad-on-sm">
+                <div class="box no-bor xl-bor lg-bor-on-md md-bor-on-sm">
                   <div ></div>
                 </div>
-                .xl-pad .lg-pad-on-md .md-pad-on-sm
+                .no-bor .xl-bor .lg-bor-on-md .md-bor-on-sm
               </div>
             </div>
           </div>

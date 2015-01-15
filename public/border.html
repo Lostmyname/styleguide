@@ -40,43 +40,48 @@
     <div class="row">
       <div class="col col-lg-12 theme-default  components">
 
-        <h1 class="h2">Margin</h1>
+        <h1 class="h2">Border</h1>
 
         <article class="lg-mar-t lg-pad-b">
-          <p class="lg-mar-t">Margin classes follow the following syntax:</p>
-          <p class="h4">[negative] - size - type - [direction] - [media-query]</p>
+          <p class="lg-mar-t">Border classes follow the following syntax:</p>
+          <p class="h4">size - type - [direction] - [media-query]</p>
         </article>
 
         <article class="lg-pad-b">
           <p>
-            <strong>neg</strong> - Add this flag to make values negative, leave blank to remain positive (optional)<br />
             <strong>size</strong> - Seven options definied in variables: <strong>xxl, xl, lg, md, sm, xs, xxs or no for none</strong><br />
-            <strong>type</strong> - For margin this is <strong>mar</strong><br />
-            <strong>direction</strong> - Direction the margin should be applied: <strong>t, r, b, l</strong> (optional)<br />
+            <strong>type</strong> - For border this is <strong>bor</strong><br />
+            <strong>direction</strong> - Direction the border should be applied: <strong>t, r, b, l</strong> (optional)<br />
             <strong>media-query</strong> - Breakpoint below which the class is active: <strong>lg, md, sm, xs</strong> (optional)<br />
+          </p>
+        </article>
+
+        <h2 class="h3">Styling</h1>
+
+        <article class="lg-pad-b">
+          <p>
+            Styling the borders (i.e. colour and style) should be done inside a compoenent.
           </p>
         </article>
 
         <h2 class="h3">Examples</h1>
 
-        <section class="demo-margin lg-mar-t">
+        <section class="demo-border lg-mar-t">
           
           <div class="container-fluid">
 
             <div class="row lg-mar-b">
 
               <div class="example display-inline lg-mar-r">
-                <div class="box">
-                  <div class="lg-mar"></div>
-                </div>
-                .lg-mar
+                <div class="box lg-bor"></div>
+                .lg-bor
               </div>
 
               <div class="example display-inline lg-mar-r">
-                <div class="box">
-                  <div class="sm-mar"></div>
+                <div class="box sm-bor">
+                  <div></div>
                 </div>
-                .sm-mar
+                .sm-bor
               </div>
             </div>
 
@@ -84,24 +89,24 @@
 
             <div class="row lg-mar-b">
               <div class="example display-inline lg-mar-r">
-                <div class="box">
-                  <div class="lg-mar-l"></div>
+                <div class="box no-bor lg-bor-l">
+                  <div></div>
                 </div>
-                .lg-mar-l
+                .no-bor .lg-bor-l
               </div>
 
               <div class="example display-inline lg-mar-r">
-                <div class="box">
-                  <div class="lg-mar-r"></div>
+                <div class="box no-bor lg-bor-r">
+                  <div></div>
                 </div>
-                .lg-mar-r
+                .no-bor .lg-bor-r
               </div>
 
               <div class="example display-inline lg-mar-r">
-                <div class="box">
-                  <div class="lg-mar-l lg-mar-r lg-mar-b"></div>
+                <div class="box no-bor lg-bor-l lg-bor-r lg-bor-b">
+                  <div></div>
                 </div>
-                .lg-mar-l .lg-mar-r .lg-mar-b
+                .no-bor .lg-bor-l .lg-bor-r .lg-bor-b
               </div>
             </div>
 
@@ -109,10 +114,10 @@
 
             <div class="row lg-mar-b">
               <div class="example display-inline lg-mar-r">
-                <div class="box">
-                  <div class="xl-mar lg-mar-on-md md-mar-on-sm"></div>
+                <div class="box no-bor xl-bor lg-bor-on-md md-bor-on-sm">
+                  <div ></div>
                 </div>
-                .xl-mar .lg-mar-on-md .md-mar-on-sm
+                .no-bor .xl-bor .lg-bor-on-md .md-bor-on-sm
               </div>
             </div>
           </div>
