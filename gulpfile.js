@@ -48,8 +48,7 @@ gulp.task('scss', function () {
     .pipe(gulp.dest('./public/build'));
 });
 
-
-gulp.task('fileinclude', function() {
+gulp.task('fileinclude', function () {
   gulp.src('./src/html/**/*.html')
     .pipe(plugins.fileInclude({
       prefix: '@@',
@@ -57,7 +56,6 @@ gulp.task('fileinclude', function() {
     }))
     .pipe(gulp.dest('./public'));
 });
-
 
 gulp.task('default', ['js', 'scss', 'fileinclude'], function () {
   dieOnError = false;
@@ -71,7 +69,7 @@ gulp.task('default', ['js', 'scss', 'fileinclude'], function () {
     server: {
       baseDir: '.'
     },
-    startPath: '/public/grid.html',
+    startPath: '/public/margin.html',
     ghostMode: {
       scroll: false,
       links: false,

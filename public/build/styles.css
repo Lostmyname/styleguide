@@ -2209,6 +2209,15 @@ hr {
   color: white;
   font-weight: bold;
 }
+.theme-styleguide .demo-margin .box {
+  display: inline-block;
+  background-color: #F7CEAE;
+}
+.theme-styleguide .demo-margin .box > div {
+  width: 100px;
+  height: 100px;
+  background-color: #e87117;
+}
 .theme-styleguide .nav {
   height: 100%;
   z-index: 1;
@@ -2231,6 +2240,7 @@ hr {
   padding: 10px;
   border-bottom-right-radius: 8px;
   font-weight: bold;
+  width: 100%;
 }
 .theme-styleguide .nav li > a:hover {
   text-decoration: none;

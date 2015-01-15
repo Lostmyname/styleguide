@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head class="full-height">
+  <meta charset="UTF-8">
+  <title>Styleguide | Lost My Name</title>
+
+  <link rel="stylesheet" href="build/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.11.0/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.11.0/theme/ambiance.css">
+
+  <script src="build/bundle.js"></script>
+</head>
+<body class="theme-styleguide full-height" style="background-color: #F5F5F5">
+
+<div class="container-fluid full-height">
+  <div class="row full-height">
+    <nav class="nav  pos-fixed pos-relative-on-xs bo-pos-l no-pos-t sm-pad col col-lg-2">
+  <img alt="Lost My Name Book" class="align-right" onerror="this.src='//d12fm4vsc5tls2.cloudfront.net/assets/logos/logo-white-148x35-f9eda6df55d8b76e374d3b9ad3451818.png'; this.onerror=null" src="//d12fm4vsc5tls2.cloudfront.net/assets/logos/logo-white-148x35-7f1b90603943adf4d8519e624ef2c511.svg">
+
+  <h3 class="nav-heading h5  md-mar-b lg-mar-t">Layout</h3>
+  <ul>
+    <li><a href="./grid.html">Grid</a></li>
+    <li><a href="./margin.html">Margin</a></li>
+  </ul>
+  <h3 class="nav-heading h5  md-mar-b">Components</h3>
+  <ul>
+    <li><a href="./button.html">Button</a></li>
+    <li><a href="./divider.html">Divider</a></li>
+    <li><a href="./panel.html">Panel</a></li>
+    <li><a href="./swiper.html">Swiper</a></li>
+    <li><a href="./switch.html">Switch</a></li>
+  </ul>
+</nav>
+    <div class="col col-lg-10 col-lg-offset-2  md-pad">
+
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-12 theme-default  components">
+
+        <h1 class="h2">Margin</h1>
+
+        <article class="lg-mar-t lg-pad-b">
+          <p class="lg-mar-t">Margin classes (as well as padding, borders and positioning) follow the following syntax:</p>
+          <p class="h4">[negative] - size - type - [direction] - [media-query]</p>
+        </article>
+
+        <article class="lg-pad-b">
+          <p>
+            <strong>neg</strong> - Add this flag to make values negative, leave blank to remain positive (optional)<br />
+            <strong>size</strong> - Seven options definied in variables: <strong>xxl, xl, lg, md, sm, xs, xxs or no for none</strong><br />
+            <strong>type</strong> - For margin this is <strong>mar</strong><br />
+            <strong>direction</strong> - Direction the margin should be applied: <strong>t, r, b, l</strong> (optional)<br />
+            <strong>media-query</strong> - Breakpoint below which the class is active: <strong>lg, md, sm, xs</strong> (optional)<br />
+          </p>
+        </article>
+
+        <h2 class="h3">Examples</h1>
+
+        <section class="demo-margin lg-mar-t">
+          
+          <div class="container-fluid">
+
+            <div class="row lg-mar-b">
+
+              <div class="example display-inline lg-mar-r">
+                <div class="box">
+                  <div class="lg-mar"></div>
+                </div>
+                .lg-mar
+              </div>
+
+              <div class="example display-inline lg-mar-r">
+                <div class="box">
+                  <div class="sm-mar"></div>
+                </div>
+                .sm-mar
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="row lg-mar-b">
+              <div class="example display-inline lg-mar-r">
+                <div class="box">
+                  <div class="lg-mar-l"></div>
+                </div>
+                .lg-mar-l
+              </div>
+
+              <div class="example display-inline lg-mar-r">
+                <div class="box">
+                  <div class="lg-mar-r"></div>
+                </div>
+                .lg-mar-r
+              </div>
+
+              <div class="example display-inline lg-mar-r">
+                <div class="box">
+                  <div class="lg-mar-l lg-mar-r lg-mar-b"></div>
+                </div>
+                .lg-mar-l .lg-mar-r .lg-mar-b
+              </div>
+            </div>
+
+            <hr>
+
+            <div class="row lg-mar-b">
+              <div class="example display-inline lg-mar-r">
+                <div class="box">
+                  <div class="xl-mar lg-mar-on-md md-mar-on-sm"></div>
+                </div>
+                .xl-mar .lg-mar-on-md .md-mar-on-sm
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+  </body>
+</html>
