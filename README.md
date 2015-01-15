@@ -1,11 +1,8 @@
-# YOUR COMPONENT HERE
+# Styleguide
 
-C'mon, write a readme.
+Our super sweet styleguide
 
 ## Installation
 
-Use through npm.
-
-### Development
-
-Run `gulp` to generate the CSS and JS and start browser-sync.
+Clone the repo.
+  $ gulp

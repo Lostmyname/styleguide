@@ -3,7 +3,7 @@ $supports-rems: true !default;
 $supports-box-shadow: true !default;
 
 
-@import "../../node_modules/lmn.tarantula/sass/lib/normalize";
+@import "../../node_modules/lmn.tarantula/sass/vender/normalize";
 
 
 
@@ -49,7 +49,7 @@ $supports-box-shadow: true !default;
 
 
 /*
- * Deafult Theme - Lost My Name (lmn)
+ * Deafult Theme - Default
  *========================================
  */
 
@@ -69,7 +69,7 @@ $supports-box-shadow: true !default;
 
 
 /*
- * Sub Theme - Lost My Name (lmn)
+ * Sub Theme - Default
  *========================================
  */
 
