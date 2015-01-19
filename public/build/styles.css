@@ -4943,7 +4943,8 @@ input[type="password"],
 }
 
 .align-center {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .inline-align-center {
@@ -5877,7 +5878,8 @@ input[type="password"],
   }
 
   .align-center-on-lg {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .inline-align-center-on-lg {
@@ -6806,7 +6808,8 @@ input[type="password"],
   }
 
   .align-center-on-md {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .inline-align-center-on-md {
@@ -7735,7 +7738,8 @@ input[type="password"],
   }
 
   .align-center-on-sm {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .inline-align-center-on-sm {
@@ -8664,7 +8668,8 @@ input[type="password"],
   }
 
   .align-center-on-xs {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .inline-align-center-on-xs {
