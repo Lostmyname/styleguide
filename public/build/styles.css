@@ -2196,6 +2196,14 @@ hr {
   background: #01b69b;
 }
 
+.tabs-tab {
+  color: #01b69b;
+}
+
+.tabs-tab.is-active {
+  color: #333333;
+}
+
 .tabs-tab:first-child {
   border-right: 2px dashed #ddd;
 }
@@ -3404,6 +3412,12 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 }
 .theme-default .gender-switch-option input:checked + label {
   background: #01b69b;
+}
+.theme-default .tabs-tab {
+  color: #01b69b;
+}
+.theme-default .tabs-tab.is-active {
+  color: #333333;
 }
 .theme-default .tabs-tab:first-child {
   border-right: 2px dashed #ddd;
