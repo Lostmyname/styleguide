@@ -80,5 +80,6 @@ gulp.task('default', ['js', 'scss', 'fileinclude'], function () {
   gulp.watch('./src/scss/**/*.{sass,scss}', ['scss']);
   gulp.watch('./node_modules/lmn.jester.*/**/*.scss', ['scss']);
   gulp.watch(['./src/js/**/*.js'], ['js']);
+  gulp.watch('./node_modules/lmn.jester.*/src/**/*.js', ['js']);
   gulp.watch(['./src/html/**/*.html'], ['fileinclude']);
 });

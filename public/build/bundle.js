@@ -11,9 +11,13 @@ require('codemirror/mode/javascript/javascript');
 require('../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper');
 var Video = require('../../node_modules/lmn.jester.component.video/src/js/jester.component.video');
 var Collapsible = require('../../node_modules/lmn.jester.component.collapsible/src/js/jester.component.collapsible');
+require('../../node_modules/lmn.jester.component.tab/src/js/jester.component.tab');
 
 $(document).ready(function () {
 
+  /*
+   * Code styling using Code Mirror
+   */
   $.each($('.code-textarea'), function (i, el) {
     var $el = $(el);
     var cm = CodeMirror.fromTextArea(el, {
@@ -29,18 +33,24 @@ $(document).ready(function () {
     }
   });
 
+  /*
+   * Init video componenet
+   */
   var $video = $('#video');
   if ($video.length > 0) {
     this.video = new Video('video');
   }
 
+  /*
+   * Init collapsible elements
+   */
   $.each($('.collapsible'), function (i, el) {
     this.collapsible = new Collapsible(el);
   });
 
 });
 
-},{"../../node_modules/lmn.jester.component.collapsible/src/js/jester.component.collapsible":8,"../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper":10,"../../node_modules/lmn.jester.component.video/src/js/jester.component.video":11,"codemirror":2,"codemirror/mode/htmlmixed/htmlmixed":4,"codemirror/mode/javascript/javascript":5,"codemirror/mode/xml/xml":6,"jquery":7}],2:[function(require,module,exports){
+},{"../../node_modules/lmn.jester.component.collapsible/src/js/jester.component.collapsible":8,"../../node_modules/lmn.jester.component.swiper/src/js/jester.component.swiper":10,"../../node_modules/lmn.jester.component.tab/src/js/jester.component.tab":12,"../../node_modules/lmn.jester.component.video/src/js/jester.component.video":13,"codemirror":2,"codemirror/mode/htmlmixed/htmlmixed":4,"codemirror/mode/javascript/javascript":5,"codemirror/mode/xml/xml":6,"jquery":7}],2:[function(require,module,exports){
 // CodeMirror, copyright (c) by Marijn Haverbeke and others
 // Distributed under an MIT license: http://codemirror.net/LICENSE
 
@@ -19272,6 +19282,51 @@ $(document).on(window.READY || 'ready', function () {
 });
 
 },{"../../node_modules/swiper/dist/idangerous.swiper.min.js":9,"jquery":7}],11:[function(require,module,exports){
+module.exports=require(7)
+},{"/Users/barneyfox/Sites/lost-my-name/styleguide/node_modules/jquery/dist/jquery.js":7}],12:[function(require,module,exports){
+'use strict';
+
+var $ = require('jquery');
+
+var tabs = module.exports = {};
+
+tabs.tabbify = function (tabs) {
+  var $tabs = $(tabs);
+
+  $tabs.on('click', function (e) {
+    e.preventDefault();
+
+    var $this = $(this);
+
+    $this.siblings('.is-active').removeClass('is-active');
+    $this.addClass('is-active');
+
+    $tabs.parent().siblings('[data-key="tabs-content"]')
+      .children().hide()
+      .filter($this.attr('href')).show();
+  });
+
+  var $activeTab = $tabs.find('.is-active');
+
+  if (!$activeTab.length) {
+    $activeTab = $tabs.children().eq(0).addClass('is-active');
+  }
+
+  // Can't use triggerHandler; relies on propagation
+  $activeTab.trigger('click');
+};
+
+$.fn.tabbify = function () {
+  this.each(function () {
+    tabs.tabbify(this);
+  });
+};
+
+$(document).on(window.READY || 'ready', function () {
+  $('[data-key="tabs"]').tabbify();
+});
+
+},{"jquery":11}],13:[function(require,module,exports){
 window.Video = module.exports = (function () {
   'use strict';
 

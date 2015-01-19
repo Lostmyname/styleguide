@@ -696,7 +696,6 @@ Pagination Styles
 
 .tabs-tab {
   display: inline-block;
-  color: #01b69b;
   text-decoration: none;
 }
 .tabs-tab:hover, .tabs-tab:active, .tabs-tab:visited, .tabs-tab:focus {
@@ -704,17 +703,7 @@ Pagination Styles
 }
 
 .tabs-tab.is-active {
-  color: #000000;
   cursor: default;
-}
-
-.tabs-tab:first-child {
-  border-right: 2px dashed #ddd;
-}
-@media screen and (max-width: 992px) {
-  .tabs-tab:first-child {
-    border-right: none;
-  }
 }
 
 .gallery-simple {
@@ -979,7 +968,7 @@ input[type="password"], .theme-default input[type="text"],
   color: #01b69b;
   pointer-events: none;
 }
-.textarea-counter.is-negative {
+.is-negative.textarea-counter {
   color: red;
 }
 textarea.no-highlight ~ .textarea-counter, .theme-default textarea.no-highlight ~ .textarea-counter {
@@ -1004,7 +993,6 @@ input[type="password"],
   outline: none;
   font-family: sans-serif;
   font-size: 0.9375em;
-  width: 100%;
 }
 .input-field.tiny, select.tiny,
 textarea.tiny,
@@ -1070,7 +1058,8 @@ input.no-highlight[type="password"],
   border-color: #d8d4c7;
 }
 
-.field-validate[data-validations], input[data-validations][type="text"],
+.field-validate[data-validations],
+input[data-validations][type="text"],
 input[data-validations][type="email"],
 input[data-validations][type="password"],
 [data-validations].input {
@@ -1079,19 +1068,22 @@ input[data-validations][type="password"],
   background-repeat: no-repeat;
   background-position: right 0.5rem top 0.5rem;
 }
-.field-validate[data-validations].is-valid, input[data-validations].is-valid[type="text"],
+.field-validate[data-validations].is-valid,
+input[data-validations].is-valid[type="text"],
 input[data-validations].is-valid[type="email"],
 input[data-validations].is-valid[type="password"],
 [data-validations].is-valid.input {
   background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
 }
-.field-validate[data-validations].is-filled.is-invalid, input[data-validations].is-filled.is-invalid[type="text"],
+.field-validate[data-validations].is-filled.is-invalid,
+input[data-validations].is-filled.is-invalid[type="text"],
 input[data-validations].is-filled.is-invalid[type="email"],
 input[data-validations].is-filled.is-invalid[type="password"],
 [data-validations].is-filled.is-invalid.input {
   background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
 }
-[data-validation-icons="false"] .field-validate[data-validations], [data-validation-icons="false"] input[data-validations][type="text"],
+[data-validation-icons="false"] .field-validate[data-validations],
+[data-validation-icons="false"] input[data-validations][type="text"],
 [data-validation-icons="false"] input[data-validations][type="email"],
 [data-validation-icons="false"] input[data-validations][type="password"],
 [data-validation-icons="false"] [data-validations].input {
@@ -1172,27 +1164,12 @@ input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
   font-size: 0.875em;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-select,
-.input,
-input[type="text"],
-input[type="email"],
-input[type="password"],
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  width: 100%;
-}
 input[type="text"].tiny,
 input[type="email"].tiny,
 input[type="password"].tiny,
 textarea.tiny,
 select.tiny,
-.input.tiny,
+.tiny.input,
 input.tiny[type="text"],
 input.tiny[type="email"],
 input.tiny[type="password"] {
@@ -1203,7 +1180,7 @@ input[type="email"].small,
 input[type="password"].small,
 textarea.small,
 select.small,
-.input.small,
+.small.input,
 input.small[type="text"],
 input.small[type="email"],
 input.small[type="password"] {
@@ -1214,7 +1191,7 @@ input[type="email"].medium,
 input[type="password"].medium,
 textarea.medium,
 select.medium,
-.input.medium,
+.medium.input,
 input.medium[type="text"],
 input.medium[type="email"],
 input.medium[type="password"] {
@@ -1258,13 +1235,40 @@ input.medium[type="password"] {
   color: #dd4b39;
 }
 
-.font-sans-serif, .button, .font-sans-serif > p, .font-sans-serif > .p, .font-sans-serif > .subheading, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > p,
-.theme-default .font-sans-serif > .p, .button > p, .body > p, body > p, .theme-default body > p, .heading > p, .h1 > p, .dropcap > p, .theme-default .dropcap > p, .theme-default .h1 > p, .h2 > p, .theme-default .h2 > p, .h3 > p, .theme-default .h3 > p, .h4 > p, .theme-default .h4 > p, .h5 > p, .theme-default .h5 > p, .h6 > p, .theme-default .h6 > p, .theme-default .heading > p, .ol > li > .ol-number > p, ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .body > p, .theme-default .ol > li > .ol-number > p, .button > .p, .body > .p, body > .p, .theme-default body > .p, .heading > .p, .h1 > .p, .dropcap > .p, .theme-default .dropcap > .p, .theme-default .h1 > .p, .h2 > .p, .theme-default .h2 > .p, .h3 > .p, .theme-default .h3 > .p, .h4 > .p, .theme-default .h4 > .p, .h5 > .p, .theme-default .h5 > .p, .h6 > .p, .theme-default .h6 > .p, .theme-default .heading > .p, .ol > li > .ol-number > .p, ol > li > .ol-number > .p, .theme-default ol > li > .ol-number > .p, .theme-default .body > .p, .theme-default .ol > li > .ol-number > .p, .button > .subheading, .body > .subheading, body > .subheading, .theme-default body > .subheading, .heading > .subheading, .h1 > .subheading, .dropcap > .subheading, .theme-default .dropcap > .subheading, .theme-default .h1 > .subheading, .h2 > .subheading, .theme-default .h2 > .subheading, .h3 > .subheading, .theme-default .h3 > .subheading, .h4 > .subheading, .theme-default .h4 > .subheading, .h5 > .subheading, .theme-default .h5 > .subheading, .h6 > .subheading, .theme-default .h6 > .subheading, .theme-default .heading > .subheading, .ol > li > .ol-number > .subheading, ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default .body > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default .button > .subheading, .theme-default .button > p,
+.font-sans-serif, .button, .font-sans-serif > p,
+.font-sans-serif > .p, .font-sans-serif > .subheading, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > p,
+.theme-default .font-sans-serif > .p, .button > p, .body > p, body > p, .theme-default body > p, .heading > p, .h1 > p, .dropcap > p, .theme-default .dropcap > p, .theme-default .h1 > p, .h2 > p, .theme-default .h2 > p, .h3 > p, .theme-default .h3 > p, .h4 > p, .theme-default .h4 > p, .h5 > p, .theme-default .h5 > p, .h6 > p, .theme-default .h6 > p, .theme-default .heading > p, .ol > li > .ol-number > p, ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .body > p, .theme-default .ol > li > .ol-number > p,
+.button > .p,
+.body > .p,
+body > .p,
+.theme-default body > .p,
+.heading > .p,
+.h1 > .p,
+.dropcap > .p,
+.theme-default .dropcap > .p,
+.theme-default .h1 > .p,
+.h2 > .p,
+.theme-default .h2 > .p,
+.h3 > .p,
+.theme-default .h3 > .p,
+.h4 > .p,
+.theme-default .h4 > .p,
+.h5 > .p,
+.theme-default .h5 > .p,
+.h6 > .p,
+.theme-default .h6 > .p,
+.theme-default .heading > .p,
+.ol > li > .ol-number > .p,
+ol > li > .ol-number > .p,
+.theme-default ol > li > .ol-number > .p,
+.theme-default .body > .p,
+.theme-default .ol > li > .ol-number > .p, .button > .subheading, .body > .subheading, body > .subheading, .theme-default body > .subheading, .heading > .subheading, .h1 > .subheading, .dropcap > .subheading, .theme-default .dropcap > .subheading, .theme-default .h1 > .subheading, .h2 > .subheading, .theme-default .h2 > .subheading, .h3 > .subheading, .theme-default .h3 > .subheading, .h4 > .subheading, .theme-default .h4 > .subheading, .h5 > .subheading, .theme-default .h5 > .subheading, .h6 > .subheading, .theme-default .h6 > .subheading, .theme-default .heading > .subheading, .ol > li > .ol-number > .subheading, ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default .body > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default .button > .subheading, .theme-default .button > p,
 .theme-default .button > .p, .body, body, .theme-default body, .heading, .h1, .dropcap, .theme-default .dropcap, .theme-default .h1, .h2, .theme-default .h2, .h3, .theme-default .h3, .h4, .theme-default .h4, .h5, .theme-default .h5, .h6, .theme-default .h6, .theme-default .heading, .ol > li > .ol-number, ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .font-sans-serif, .theme-default .body, .theme-default .ol > li > .ol-number {
   font-family: "adelle-sans", sans-serif;
 }
 
-.font-serif, .p, p, .subheading, .theme-default .subheading, .theme-default p,
+.font-serif,
+.p, p, .subheading, .theme-default .subheading, .theme-default p,
 .theme-default .p, .italic, .blockquote, blockquote,
 blockquote p, .theme-default blockquote,
 .theme-default blockquote p, .theme-default .italic, .theme-default .blockquote,
@@ -1315,15 +1319,17 @@ blockquote .theme-default p, .heading-brushed, .theme-default .heading-brushed, 
 .p:last-child, p:last-child, .subheading:last-child {
   margin-bottom: 0;
 }
-.p.small, p.small, .small.subheading {
+.small.p, p.small, .small.subheading {
   font-size: 1em;
 }
 
-.p-li, .p li, p li, .subheading li, .theme-default .subheading li, .theme-default p li,
+.p-li,
+.p li, p li, .subheading li, .theme-default .subheading li, .theme-default p li,
 .theme-default .p li {
   margin-bottom: 1.25rem;
 }
-.p-li:last-child, .p li:last-child, p li:last-child, .subheading li:last-child, .theme-default p li:last-child {
+.p-li:last-child,
+.p li:last-child, p li:last-child, .subheading li:last-child, .theme-default p li:last-child {
   margin-bottom: 0;
 }
 
@@ -1351,7 +1357,7 @@ blockquote .theme-default p {
   margin-bottom: 1.875rem;
   font-size: 4.125em;
 }
-.h1.huge, .huge.dropcap {
+.huge.h1, .huge.dropcap {
   line-height: 4.125rem;
   margin-bottom: 2.0625rem;
   font-size: 3.75em;
@@ -1817,7 +1823,7 @@ input[type="password"], .theme-default input[type="text"],
   color: #01b69b;
   pointer-events: none;
 }
-.textarea-counter.is-negative {
+.is-negative.textarea-counter {
   color: red;
 }
 textarea.no-highlight ~ .textarea-counter, .theme-default textarea.no-highlight ~ .textarea-counter {
@@ -1842,7 +1848,6 @@ input[type="password"],
   outline: none;
   font-family: sans-serif;
   font-size: 0.9375em;
-  width: 100%;
 }
 .input-field.tiny, select.tiny,
 textarea.tiny,
@@ -1908,7 +1913,8 @@ input.no-highlight[type="password"],
   border-color: #d8d4c7;
 }
 
-.field-validate[data-validations], input[data-validations][type="text"],
+.field-validate[data-validations],
+input[data-validations][type="text"],
 input[data-validations][type="email"],
 input[data-validations][type="password"],
 [data-validations].input {
@@ -1917,19 +1923,22 @@ input[data-validations][type="password"],
   background-repeat: no-repeat;
   background-position: right 0.5rem top 0.5rem;
 }
-.field-validate[data-validations].is-valid, input[data-validations].is-valid[type="text"],
+.field-validate[data-validations].is-valid,
+input[data-validations].is-valid[type="text"],
 input[data-validations].is-valid[type="email"],
 input[data-validations].is-valid[type="password"],
 [data-validations].is-valid.input {
   background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
 }
-.field-validate[data-validations].is-filled.is-invalid, input[data-validations].is-filled.is-invalid[type="text"],
+.field-validate[data-validations].is-filled.is-invalid,
+input[data-validations].is-filled.is-invalid[type="text"],
 input[data-validations].is-filled.is-invalid[type="email"],
 input[data-validations].is-filled.is-invalid[type="password"],
 [data-validations].is-filled.is-invalid.input {
   background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
 }
-[data-validation-icons="false"] .field-validate[data-validations], [data-validation-icons="false"] input[data-validations][type="text"],
+[data-validation-icons="false"] .field-validate[data-validations],
+[data-validation-icons="false"] input[data-validations][type="text"],
 [data-validation-icons="false"] input[data-validations][type="email"],
 [data-validation-icons="false"] input[data-validations][type="password"],
 [data-validation-icons="false"] [data-validations].input {
@@ -2187,6 +2196,15 @@ hr {
   background: #01b69b;
 }
 
+.tabs-tab:first-child {
+  border-right: 2px dashed #ddd;
+}
+@media screen and (max-width: 992px) {
+  .tabs-tab:first-child {
+    border-right: none;
+  }
+}
+
 /*
  * Sub Theme - Styleguide
  *========================================
@@ -2225,32 +2243,6 @@ hr {
   color: white;
   font-weight: bold;
 }
-.theme-styleguide .demo-margin .box {
-  display: inline-block;
-  background-color: #F7CEAE;
-}
-.theme-styleguide .demo-margin .box > div {
-  width: 100px;
-  height: 100px;
-  background-color: #e87117;
-}
-.theme-styleguide .demo-padding .box {
-  display: inline-block;
-  background-color: #d8d4c7;
-}
-.theme-styleguide .demo-padding .box > div {
-  width: 100px;
-  height: 100px;
-  background-color: #01b69b;
-}
-.theme-styleguide .demo-border .box {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background-color: #d8d4c7;
-  border-color: #c5c2b7;
-  border-style: solid;
-}
 .theme-styleguide .nav {
   height: 100%;
   z-index: 1;
@@ -2264,7 +2256,7 @@ hr {
 }
 .theme-styleguide .nav li {
   display: block;
-  margin: 0 0 1px 0;
+  margin: 0 0 1px 2px;
 }
 .theme-styleguide .nav li > a {
   display: block;
@@ -2273,11 +2265,15 @@ hr {
   padding: 10px;
   border-bottom-right-radius: 8px;
   font-weight: bold;
-  width: 100%;
 }
 .theme-styleguide .nav li > a:hover {
   text-decoration: none;
   background: white;
+}
+.theme-styleguide .swiper-slide {
+  background: red;
+  height: 400px;
+  width: 100%;
 }
 
 /*
@@ -2382,7 +2378,6 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
   outline: none;
   font-family: sans-serif;
   font-size: 0.9375em;
-  width: 100%;
 }
 .theme-default .input-field.tiny, .theme-default select.tiny,
 .theme-default textarea.tiny,
@@ -2446,7 +2441,8 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 .no-highlight .theme-default textarea {
   border-color: #d8d4c7;
 }
-.theme-default .field-validate[data-validations], .theme-default input[data-validations][type="text"],
+.theme-default .field-validate[data-validations],
+.theme-default input[data-validations][type="text"],
 .theme-default input[data-validations][type="email"],
 .theme-default input[data-validations][type="password"],
 .theme-default [data-validations].input {
@@ -2455,19 +2451,22 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
   background-repeat: no-repeat;
   background-position: right 0.5rem top 0.5rem;
 }
-.theme-default .field-validate[data-validations].is-valid, .theme-default input[data-validations].is-valid[type="text"],
+.theme-default .field-validate[data-validations].is-valid,
+.theme-default input[data-validations].is-valid[type="text"],
 .theme-default input[data-validations].is-valid[type="email"],
 .theme-default input[data-validations].is-valid[type="password"],
 .theme-default [data-validations].is-valid.input {
   background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
 }
-.theme-default .field-validate[data-validations].is-filled.is-invalid, .theme-default input[data-validations].is-filled.is-invalid[type="text"],
+.theme-default .field-validate[data-validations].is-filled.is-invalid,
+.theme-default input[data-validations].is-filled.is-invalid[type="text"],
 .theme-default input[data-validations].is-filled.is-invalid[type="email"],
 .theme-default input[data-validations].is-filled.is-invalid[type="password"],
 .theme-default [data-validations].is-filled.is-invalid.input {
   background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
 }
-[data-validation-icons="false"] .theme-default .field-validate[data-validations], [data-validation-icons="false"] .theme-default input[data-validations][type="text"],
+[data-validation-icons="false"] .theme-default .field-validate[data-validations],
+[data-validation-icons="false"] .theme-default input[data-validations][type="text"],
 [data-validation-icons="false"] .theme-default input[data-validations][type="email"],
 [data-validation-icons="false"] .theme-default input[data-validations][type="password"],
 [data-validation-icons="false"] .theme-default [data-validations].input {
@@ -2533,17 +2532,6 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
   color: #ff4a00;
   font-size: 0.875em;
 }
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default textarea,
-.theme-default select,
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  width: 100%;
-}
 .theme-default input[type="text"].tiny,
 .theme-default input[type="email"].tiny,
 .theme-default input[type="password"].tiny,
@@ -2606,23 +2594,50 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 .theme-default .color-google {
   color: #dd4b39;
 }
-.theme-default .font-sans-serif, .theme-default .button, .theme-default .font-sans-serif > p, .theme-default .font-sans-serif > .p, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > p,
-.theme-default .font-sans-serif > .p, .theme-default .button > p, .theme-default .body > p, .theme-default body > p, .theme-default body > p, .theme-default .heading > p, .theme-default .h1 > p, .theme-default .dropcap > p, .theme-default .dropcap > p, .theme-default .h1 > p, .theme-default .h2 > p, .theme-default .h2 > p, .theme-default .h3 > p, .theme-default .h3 > p, .theme-default .h4 > p, .theme-default .h4 > p, .theme-default .h5 > p, .theme-default .h5 > p, .theme-default .h6 > p, .theme-default .h6 > p, .theme-default .heading > p, .theme-default .ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .body > p, .theme-default .ol > li > .ol-number > p, .theme-default .button > .p, .theme-default .body > .p, .theme-default body > .p, .theme-default body > .p, .theme-default .heading > .p, .theme-default .h1 > .p, .theme-default .dropcap > .p, .theme-default .dropcap > .p, .theme-default .h1 > .p, .theme-default .h2 > .p, .theme-default .h2 > .p, .theme-default .h3 > .p, .theme-default .h3 > .p, .theme-default .h4 > .p, .theme-default .h4 > .p, .theme-default .h5 > .p, .theme-default .h5 > .p, .theme-default .h6 > .p, .theme-default .h6 > .p, .theme-default .heading > .p, .theme-default .ol > li > .ol-number > .p, .theme-default ol > li > .ol-number > .p, .theme-default ol > li > .ol-number > .p, .theme-default .body > .p, .theme-default .ol > li > .ol-number > .p, .theme-default .button > .subheading, .theme-default .body > .subheading, .theme-default body > .subheading, .theme-default body > .subheading, .theme-default .heading > .subheading, .theme-default .h1 > .subheading, .theme-default .dropcap > .subheading, .theme-default .dropcap > .subheading, .theme-default .h1 > .subheading, .theme-default .h2 > .subheading, .theme-default .h2 > .subheading, .theme-default .h3 > .subheading, .theme-default .h3 > .subheading, .theme-default .h4 > .subheading, .theme-default .h4 > .subheading, .theme-default .h5 > .subheading, .theme-default .h5 > .subheading, .theme-default .h6 > .subheading, .theme-default .h6 > .subheading, .theme-default .heading > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default .body > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default .button > .subheading, .theme-default .button > p,
+.theme-default .font-sans-serif, .theme-default .button, .theme-default .font-sans-serif > p,
+.theme-default .font-sans-serif > .p, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > p,
+.theme-default .font-sans-serif > .p, .theme-default .button > p, .theme-default .body > p, .theme-default body > p, .theme-default body > p, .theme-default .heading > p, .theme-default .h1 > p, .theme-default .dropcap > p, .theme-default .dropcap > p, .theme-default .h1 > p, .theme-default .h2 > p, .theme-default .h2 > p, .theme-default .h3 > p, .theme-default .h3 > p, .theme-default .h4 > p, .theme-default .h4 > p, .theme-default .h5 > p, .theme-default .h5 > p, .theme-default .h6 > p, .theme-default .h6 > p, .theme-default .heading > p, .theme-default .ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .body > p, .theme-default .ol > li > .ol-number > p,
+.theme-default .button > .p,
+.theme-default .body > .p,
+.theme-default body > .p,
+.theme-default body > .p,
+.theme-default .heading > .p,
+.theme-default .h1 > .p,
+.theme-default .dropcap > .p,
+.theme-default .dropcap > .p,
+.theme-default .h1 > .p,
+.theme-default .h2 > .p,
+.theme-default .h2 > .p,
+.theme-default .h3 > .p,
+.theme-default .h3 > .p,
+.theme-default .h4 > .p,
+.theme-default .h4 > .p,
+.theme-default .h5 > .p,
+.theme-default .h5 > .p,
+.theme-default .h6 > .p,
+.theme-default .h6 > .p,
+.theme-default .heading > .p,
+.theme-default .ol > li > .ol-number > .p,
+.theme-default ol > li > .ol-number > .p,
+.theme-default ol > li > .ol-number > .p,
+.theme-default .body > .p,
+.theme-default .ol > li > .ol-number > .p, .theme-default .button > .subheading, .theme-default .body > .subheading, .theme-default body > .subheading, .theme-default body > .subheading, .theme-default .heading > .subheading, .theme-default .h1 > .subheading, .theme-default .dropcap > .subheading, .theme-default .dropcap > .subheading, .theme-default .h1 > .subheading, .theme-default .h2 > .subheading, .theme-default .h2 > .subheading, .theme-default .h3 > .subheading, .theme-default .h3 > .subheading, .theme-default .h4 > .subheading, .theme-default .h4 > .subheading, .theme-default .h5 > .subheading, .theme-default .h5 > .subheading, .theme-default .h6 > .subheading, .theme-default .h6 > .subheading, .theme-default .heading > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default .body > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default .button > .subheading, .theme-default .button > p,
 .theme-default .button > .p, .theme-default .body, .theme-default body, .theme-default body, .theme-default .heading, .theme-default .h1, .theme-default .dropcap, .theme-default .dropcap, .theme-default .h1, .theme-default .h2, .theme-default .h2, .theme-default .h3, .theme-default .h3, .theme-default .h4, .theme-default .h4, .theme-default .h5, .theme-default .h5, .theme-default .h6, .theme-default .h6, .theme-default .heading, .theme-default .ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .font-sans-serif, .theme-default .body, .theme-default .ol > li > .ol-number {
   font-family: "adelle-sans", sans-serif;
 }
-.theme-default p, .theme-default .subheading,
+.theme-default p, .theme-default .subheading, .theme-default p,
 .theme-default .p, .theme-default blockquote,
 .theme-default blockquote p,
-blockquote .theme-default p, .theme-default .italic, .theme-default .blockquote,
-blockquote .theme-default p, .theme-default .heading-brushed, .theme-default ol > li, .theme-default .font-serif, .theme-default .ol > li {
+blockquote .theme-default p, .theme-default blockquote,
+.theme-default blockquote p, .theme-default .italic, .theme-default .blockquote,
+blockquote .theme-default p, .theme-default .heading-brushed, .theme-default ol > li, .theme-default ol > li, .theme-default .font-serif, .theme-default .ol > li {
   font-family: "freight-text-pro", serif;
 }
-.theme-default .base-font, .theme-default html, .theme-default body, .theme-default .html, .theme-default .body {
+.theme-default .base-font, .theme-default html, .theme-default html, .theme-default body, .theme-default body, .theme-default .html, .theme-default .body {
   font-size: 16px;
 }
 @media all and (max-width: 768px) {
-  .theme-default .base-font, .theme-default html, .theme-default body, .theme-default .html, .theme-default .body {
+  .theme-default .base-font, .theme-default html, .theme-default html, .theme-default body, .theme-default body, .theme-default .html, .theme-default .body {
     font-size: 14.8px;
   }
 }
@@ -2662,24 +2677,27 @@ blockquote .theme-default p, .theme-default .heading-brushed, .theme-default ol 
 .theme-default .small.p, .theme-default .small.subheading {
   font-size: 1em;
 }
-.theme-default .p-li, .p .theme-default li, .theme-default p li, p .theme-default li, .subheading .theme-default li, .theme-default .subheading li,
+.theme-default .p-li,
+.p .theme-default li, .theme-default p li, p .theme-default li, .subheading .theme-default li, .theme-default .subheading li, .theme-default p li,
 .theme-default .p li {
   margin-bottom: 1.25rem;
 }
-.theme-default .p-li:last-child, .p .theme-default li:last-child, .theme-default p li:last-child, p .theme-default li:last-child, .subheading .theme-default li:last-child, .theme-default .subheading li:last-child,
+.theme-default .p-li:last-child,
+.p .theme-default li:last-child, .theme-default p li:last-child, p .theme-default li:last-child, .subheading .theme-default li:last-child, .theme-default .subheading li:last-child,
 .theme-default .p li:last-child {
   margin-bottom: 0;
 }
 .theme-default blockquote,
 .theme-default blockquote p,
-blockquote .theme-default p, .theme-default .italic, .theme-default .blockquote,
+blockquote .theme-default p, .theme-default blockquote,
+.theme-default blockquote p, .theme-default .italic, .theme-default .blockquote,
 blockquote .theme-default p {
   font-style: italic;
 }
 .theme-default .icon {
   vertical-align: top;
 }
-.theme-default ol > li, .theme-default ol > li > .ol-number, .theme-default .text-md, .theme-default .ol > li, .theme-default .ol > li > .ol-number {
+.theme-default ol > li, .theme-default ol > li, .theme-default ol > li > .ol-number, .theme-default .text-md, .theme-default .ol > li, .theme-default .ol > li > .ol-number {
   font-size: 20px;
 }
 .theme-default .dropcap, .theme-default .h1, .theme-default .h2, .theme-default .h3, .theme-default .h4, .theme-default .h5, .theme-default .h6, .theme-default .heading {
@@ -3081,7 +3099,6 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
   outline: none;
   font-family: sans-serif;
   font-size: 0.9375em;
-  width: 100%;
 }
 .theme-default .input-field.tiny, .theme-default select.tiny,
 .theme-default textarea.tiny,
@@ -3145,7 +3162,8 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 .no-highlight .theme-default textarea {
   border-color: #d8d4c7;
 }
-.theme-default .field-validate[data-validations], .theme-default input[data-validations][type="text"],
+.theme-default .field-validate[data-validations],
+.theme-default input[data-validations][type="text"],
 .theme-default input[data-validations][type="email"],
 .theme-default input[data-validations][type="password"],
 .theme-default [data-validations].input {
@@ -3154,19 +3172,22 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
   background-repeat: no-repeat;
   background-position: right 0.5rem top 0.5rem;
 }
-.theme-default .field-validate[data-validations].is-valid, .theme-default input[data-validations].is-valid[type="text"],
+.theme-default .field-validate[data-validations].is-valid,
+.theme-default input[data-validations].is-valid[type="text"],
 .theme-default input[data-validations].is-valid[type="email"],
 .theme-default input[data-validations].is-valid[type="password"],
 .theme-default [data-validations].is-valid.input {
   background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
 }
-.theme-default .field-validate[data-validations].is-filled.is-invalid, .theme-default input[data-validations].is-filled.is-invalid[type="text"],
+.theme-default .field-validate[data-validations].is-filled.is-invalid,
+.theme-default input[data-validations].is-filled.is-invalid[type="text"],
 .theme-default input[data-validations].is-filled.is-invalid[type="email"],
 .theme-default input[data-validations].is-filled.is-invalid[type="password"],
 .theme-default [data-validations].is-filled.is-invalid.input {
   background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
 }
-[data-validation-icons="false"] .theme-default .field-validate[data-validations], [data-validation-icons="false"] .theme-default input[data-validations][type="text"],
+[data-validation-icons="false"] .theme-default .field-validate[data-validations],
+[data-validation-icons="false"] .theme-default input[data-validations][type="text"],
 [data-validation-icons="false"] .theme-default input[data-validations][type="email"],
 [data-validation-icons="false"] .theme-default input[data-validations][type="password"],
 [data-validation-icons="false"] .theme-default [data-validations].input {
@@ -3383,6 +3404,14 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 }
 .theme-default .gender-switch-option input:checked + label {
   background: #01b69b;
+}
+.theme-default .tabs-tab:first-child {
+  border-right: 2px dashed #ddd;
+}
+@media screen and (max-width: 992px) {
+  .theme-default .tabs-tab:first-child {
+    border-right: none;
+  }
 }
 
 /*
@@ -4598,7 +4627,19 @@ ol > li:after,
   display: none;
 }
 
-.full-width {
+.full-width, .input-field,
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+.input,
+.theme-default input[type="text"],
+.theme-default input[type="email"],
+.theme-default input[type="password"],
+.theme-default .input,
+.theme-default select,
+.theme-default textarea, .theme-default .input-field {
   width: 100%;
 }
 
@@ -5352,163 +5393,163 @@ ol > li:after,
  * border helpers
  */
 .no-bor {
-  border-width: 0;
+  border: 0;
 }
 
 .xxs-bor {
-  border-width: 1px;
+  border: 1px;
 }
 
 .xs-bor {
-  border-width: 2px;
+  border: 2px;
 }
 
 .sm-bor {
-  border-width: 3px;
+  border: 3px;
 }
 
 .md-bor {
-  border-width: 4px;
+  border: 4px;
 }
 
 .lg-bor {
-  border-width: 5px;
+  border: 5px;
 }
 
 .xl-bor {
-  border-width: 6px;
+  border: 6px;
 }
 
 .xxl-bor {
-  border-width: 7px;
+  border: 7px;
 }
 
 .no-bor-l {
-  border-left-width: 0;
+  border-left: 0;
 }
 
 .xxs-bor-l {
-  border-left-width: 1px;
+  border-left: 1px;
 }
 
 .xs-bor-l {
-  border-left-width: 2px;
+  border-left: 2px;
 }
 
 .sm-bor-l {
-  border-left-width: 3px;
+  border-left: 3px;
 }
 
 .md-bor-l {
-  border-left-width: 4px;
+  border-left: 4px;
 }
 
 .lg-bor-l {
-  border-left-width: 5px;
+  border-left: 5px;
 }
 
 .xl-bor-l {
-  border-left-width: 6px;
+  border-left: 6px;
 }
 
 .xxl-bor-l {
-  border-left-width: 7px;
+  border-left: 7px;
 }
 
 .no-bor-t {
-  border-top-width: 0;
+  border-top: 0;
 }
 
 .xxs-bor-t {
-  border-top-width: 1px;
+  border-top: 1px;
 }
 
 .xs-bor-t {
-  border-top-width: 2px;
+  border-top: 2px;
 }
 
 .sm-bor-t {
-  border-top-width: 3px;
+  border-top: 3px;
 }
 
 .md-bor-t {
-  border-top-width: 4px;
+  border-top: 4px;
 }
 
 .lg-bor-t {
-  border-top-width: 5px;
+  border-top: 5px;
 }
 
 .xl-bor-t {
-  border-top-width: 6px;
+  border-top: 6px;
 }
 
 .xxl-bor-t {
-  border-top-width: 7px;
+  border-top: 7px;
 }
 
 .no-bor-r {
-  border-right-width: 0;
+  border-right: 0;
 }
 
 .xxs-bor-r {
-  border-right-width: 1px;
+  border-right: 1px;
 }
 
 .xs-bor-r {
-  border-right-width: 2px;
+  border-right: 2px;
 }
 
 .sm-bor-r {
-  border-right-width: 3px;
+  border-right: 3px;
 }
 
 .md-bor-r {
-  border-right-width: 4px;
+  border-right: 4px;
 }
 
 .lg-bor-r {
-  border-right-width: 5px;
+  border-right: 5px;
 }
 
 .xl-bor-r {
-  border-right-width: 6px;
+  border-right: 6px;
 }
 
 .xxl-bor-r {
-  border-right-width: 7px;
+  border-right: 7px;
 }
 
 .no-bor-b {
-  border-bottom-width: 0;
+  border-bottom: 0;
 }
 
 .xxs-bor-b {
-  border-bottom-width: 1px;
+  border-bottom: 1px;
 }
 
 .xs-bor-b {
-  border-bottom-width: 2px;
+  border-bottom: 2px;
 }
 
 .sm-bor-b {
-  border-bottom-width: 3px;
+  border-bottom: 3px;
 }
 
 .md-bor-b {
-  border-bottom-width: 4px;
+  border-bottom: 4px;
 }
 
 .lg-bor-b {
-  border-bottom-width: 5px;
+  border-bottom: 5px;
 }
 
 .xl-bor-b {
-  border-bottom-width: 6px;
+  border-bottom: 6px;
 }
 
 .xxl-bor-b {
-  border-bottom-width: 7px;
+  border-bottom: 7px;
 }
 
 /*
@@ -6286,163 +6327,163 @@ ol > li:after,
    * border helpers
    */
   .no-bor-on-lg {
-    border-width: 0;
+    border: 0;
   }
 
   .xxs-bor-on-lg {
-    border-width: 1px;
+    border: 1px;
   }
 
   .xs-bor-on-lg {
-    border-width: 2px;
+    border: 2px;
   }
 
   .sm-bor-on-lg {
-    border-width: 3px;
+    border: 3px;
   }
 
   .md-bor-on-lg {
-    border-width: 4px;
+    border: 4px;
   }
 
   .lg-bor-on-lg {
-    border-width: 5px;
+    border: 5px;
   }
 
   .xl-bor-on-lg {
-    border-width: 6px;
+    border: 6px;
   }
 
   .xxl-bor-on-lg {
-    border-width: 7px;
+    border: 7px;
   }
 
   .no-bor-l-on-lg {
-    border-left-width: 0;
+    border-left: 0;
   }
 
   .xxs-bor-l-on-lg {
-    border-left-width: 1px;
+    border-left: 1px;
   }
 
   .xs-bor-l-on-lg {
-    border-left-width: 2px;
+    border-left: 2px;
   }
 
   .sm-bor-l-on-lg {
-    border-left-width: 3px;
+    border-left: 3px;
   }
 
   .md-bor-l-on-lg {
-    border-left-width: 4px;
+    border-left: 4px;
   }
 
   .lg-bor-l-on-lg {
-    border-left-width: 5px;
+    border-left: 5px;
   }
 
   .xl-bor-l-on-lg {
-    border-left-width: 6px;
+    border-left: 6px;
   }
 
   .xxl-bor-l-on-lg {
-    border-left-width: 7px;
+    border-left: 7px;
   }
 
   .no-bor-t-on-lg {
-    border-top-width: 0;
+    border-top: 0;
   }
 
   .xxs-bor-t-on-lg {
-    border-top-width: 1px;
+    border-top: 1px;
   }
 
   .xs-bor-t-on-lg {
-    border-top-width: 2px;
+    border-top: 2px;
   }
 
   .sm-bor-t-on-lg {
-    border-top-width: 3px;
+    border-top: 3px;
   }
 
   .md-bor-t-on-lg {
-    border-top-width: 4px;
+    border-top: 4px;
   }
 
   .lg-bor-t-on-lg {
-    border-top-width: 5px;
+    border-top: 5px;
   }
 
   .xl-bor-t-on-lg {
-    border-top-width: 6px;
+    border-top: 6px;
   }
 
   .xxl-bor-t-on-lg {
-    border-top-width: 7px;
+    border-top: 7px;
   }
 
   .no-bor-r-on-lg {
-    border-right-width: 0;
+    border-right: 0;
   }
 
   .xxs-bor-r-on-lg {
-    border-right-width: 1px;
+    border-right: 1px;
   }
 
   .xs-bor-r-on-lg {
-    border-right-width: 2px;
+    border-right: 2px;
   }
 
   .sm-bor-r-on-lg {
-    border-right-width: 3px;
+    border-right: 3px;
   }
 
   .md-bor-r-on-lg {
-    border-right-width: 4px;
+    border-right: 4px;
   }
 
   .lg-bor-r-on-lg {
-    border-right-width: 5px;
+    border-right: 5px;
   }
 
   .xl-bor-r-on-lg {
-    border-right-width: 6px;
+    border-right: 6px;
   }
 
   .xxl-bor-r-on-lg {
-    border-right-width: 7px;
+    border-right: 7px;
   }
 
   .no-bor-b-on-lg {
-    border-bottom-width: 0;
+    border-bottom: 0;
   }
 
   .xxs-bor-b-on-lg {
-    border-bottom-width: 1px;
+    border-bottom: 1px;
   }
 
   .xs-bor-b-on-lg {
-    border-bottom-width: 2px;
+    border-bottom: 2px;
   }
 
   .sm-bor-b-on-lg {
-    border-bottom-width: 3px;
+    border-bottom: 3px;
   }
 
   .md-bor-b-on-lg {
-    border-bottom-width: 4px;
+    border-bottom: 4px;
   }
 
   .lg-bor-b-on-lg {
-    border-bottom-width: 5px;
+    border-bottom: 5px;
   }
 
   .xl-bor-b-on-lg {
-    border-bottom-width: 6px;
+    border-bottom: 6px;
   }
 
   .xxl-bor-b-on-lg {
-    border-bottom-width: 7px;
+    border-bottom: 7px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -7215,163 +7256,163 @@ ol > li:after,
    * border helpers
    */
   .no-bor-on-md {
-    border-width: 0;
+    border: 0;
   }
 
   .xxs-bor-on-md {
-    border-width: 1px;
+    border: 1px;
   }
 
   .xs-bor-on-md {
-    border-width: 2px;
+    border: 2px;
   }
 
   .sm-bor-on-md {
-    border-width: 3px;
+    border: 3px;
   }
 
   .md-bor-on-md {
-    border-width: 4px;
+    border: 4px;
   }
 
   .lg-bor-on-md {
-    border-width: 5px;
+    border: 5px;
   }
 
   .xl-bor-on-md {
-    border-width: 6px;
+    border: 6px;
   }
 
   .xxl-bor-on-md {
-    border-width: 7px;
+    border: 7px;
   }
 
   .no-bor-l-on-md {
-    border-left-width: 0;
+    border-left: 0;
   }
 
   .xxs-bor-l-on-md {
-    border-left-width: 1px;
+    border-left: 1px;
   }
 
   .xs-bor-l-on-md {
-    border-left-width: 2px;
+    border-left: 2px;
   }
 
   .sm-bor-l-on-md {
-    border-left-width: 3px;
+    border-left: 3px;
   }
 
   .md-bor-l-on-md {
-    border-left-width: 4px;
+    border-left: 4px;
   }
 
   .lg-bor-l-on-md {
-    border-left-width: 5px;
+    border-left: 5px;
   }
 
   .xl-bor-l-on-md {
-    border-left-width: 6px;
+    border-left: 6px;
   }
 
   .xxl-bor-l-on-md {
-    border-left-width: 7px;
+    border-left: 7px;
   }
 
   .no-bor-t-on-md {
-    border-top-width: 0;
+    border-top: 0;
   }
 
   .xxs-bor-t-on-md {
-    border-top-width: 1px;
+    border-top: 1px;
   }
 
   .xs-bor-t-on-md {
-    border-top-width: 2px;
+    border-top: 2px;
   }
 
   .sm-bor-t-on-md {
-    border-top-width: 3px;
+    border-top: 3px;
   }
 
   .md-bor-t-on-md {
-    border-top-width: 4px;
+    border-top: 4px;
   }
 
   .lg-bor-t-on-md {
-    border-top-width: 5px;
+    border-top: 5px;
   }
 
   .xl-bor-t-on-md {
-    border-top-width: 6px;
+    border-top: 6px;
   }
 
   .xxl-bor-t-on-md {
-    border-top-width: 7px;
+    border-top: 7px;
   }
 
   .no-bor-r-on-md {
-    border-right-width: 0;
+    border-right: 0;
   }
 
   .xxs-bor-r-on-md {
-    border-right-width: 1px;
+    border-right: 1px;
   }
 
   .xs-bor-r-on-md {
-    border-right-width: 2px;
+    border-right: 2px;
   }
 
   .sm-bor-r-on-md {
-    border-right-width: 3px;
+    border-right: 3px;
   }
 
   .md-bor-r-on-md {
-    border-right-width: 4px;
+    border-right: 4px;
   }
 
   .lg-bor-r-on-md {
-    border-right-width: 5px;
+    border-right: 5px;
   }
 
   .xl-bor-r-on-md {
-    border-right-width: 6px;
+    border-right: 6px;
   }
 
   .xxl-bor-r-on-md {
-    border-right-width: 7px;
+    border-right: 7px;
   }
 
   .no-bor-b-on-md {
-    border-bottom-width: 0;
+    border-bottom: 0;
   }
 
   .xxs-bor-b-on-md {
-    border-bottom-width: 1px;
+    border-bottom: 1px;
   }
 
   .xs-bor-b-on-md {
-    border-bottom-width: 2px;
+    border-bottom: 2px;
   }
 
   .sm-bor-b-on-md {
-    border-bottom-width: 3px;
+    border-bottom: 3px;
   }
 
   .md-bor-b-on-md {
-    border-bottom-width: 4px;
+    border-bottom: 4px;
   }
 
   .lg-bor-b-on-md {
-    border-bottom-width: 5px;
+    border-bottom: 5px;
   }
 
   .xl-bor-b-on-md {
-    border-bottom-width: 6px;
+    border-bottom: 6px;
   }
 
   .xxl-bor-b-on-md {
-    border-bottom-width: 7px;
+    border-bottom: 7px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -8144,163 +8185,163 @@ ol > li:after,
    * border helpers
    */
   .no-bor-on-sm {
-    border-width: 0;
+    border: 0;
   }
 
   .xxs-bor-on-sm {
-    border-width: 1px;
+    border: 1px;
   }
 
   .xs-bor-on-sm {
-    border-width: 2px;
+    border: 2px;
   }
 
   .sm-bor-on-sm {
-    border-width: 3px;
+    border: 3px;
   }
 
   .md-bor-on-sm {
-    border-width: 4px;
+    border: 4px;
   }
 
   .lg-bor-on-sm {
-    border-width: 5px;
+    border: 5px;
   }
 
   .xl-bor-on-sm {
-    border-width: 6px;
+    border: 6px;
   }
 
   .xxl-bor-on-sm {
-    border-width: 7px;
+    border: 7px;
   }
 
   .no-bor-l-on-sm {
-    border-left-width: 0;
+    border-left: 0;
   }
 
   .xxs-bor-l-on-sm {
-    border-left-width: 1px;
+    border-left: 1px;
   }
 
   .xs-bor-l-on-sm {
-    border-left-width: 2px;
+    border-left: 2px;
   }
 
   .sm-bor-l-on-sm {
-    border-left-width: 3px;
+    border-left: 3px;
   }
 
   .md-bor-l-on-sm {
-    border-left-width: 4px;
+    border-left: 4px;
   }
 
   .lg-bor-l-on-sm {
-    border-left-width: 5px;
+    border-left: 5px;
   }
 
   .xl-bor-l-on-sm {
-    border-left-width: 6px;
+    border-left: 6px;
   }
 
   .xxl-bor-l-on-sm {
-    border-left-width: 7px;
+    border-left: 7px;
   }
 
   .no-bor-t-on-sm {
-    border-top-width: 0;
+    border-top: 0;
   }
 
   .xxs-bor-t-on-sm {
-    border-top-width: 1px;
+    border-top: 1px;
   }
 
   .xs-bor-t-on-sm {
-    border-top-width: 2px;
+    border-top: 2px;
   }
 
   .sm-bor-t-on-sm {
-    border-top-width: 3px;
+    border-top: 3px;
   }
 
   .md-bor-t-on-sm {
-    border-top-width: 4px;
+    border-top: 4px;
   }
 
   .lg-bor-t-on-sm {
-    border-top-width: 5px;
+    border-top: 5px;
   }
 
   .xl-bor-t-on-sm {
-    border-top-width: 6px;
+    border-top: 6px;
   }
 
   .xxl-bor-t-on-sm {
-    border-top-width: 7px;
+    border-top: 7px;
   }
 
   .no-bor-r-on-sm {
-    border-right-width: 0;
+    border-right: 0;
   }
 
   .xxs-bor-r-on-sm {
-    border-right-width: 1px;
+    border-right: 1px;
   }
 
   .xs-bor-r-on-sm {
-    border-right-width: 2px;
+    border-right: 2px;
   }
 
   .sm-bor-r-on-sm {
-    border-right-width: 3px;
+    border-right: 3px;
   }
 
   .md-bor-r-on-sm {
-    border-right-width: 4px;
+    border-right: 4px;
   }
 
   .lg-bor-r-on-sm {
-    border-right-width: 5px;
+    border-right: 5px;
   }
 
   .xl-bor-r-on-sm {
-    border-right-width: 6px;
+    border-right: 6px;
   }
 
   .xxl-bor-r-on-sm {
-    border-right-width: 7px;
+    border-right: 7px;
   }
 
   .no-bor-b-on-sm {
-    border-bottom-width: 0;
+    border-bottom: 0;
   }
 
   .xxs-bor-b-on-sm {
-    border-bottom-width: 1px;
+    border-bottom: 1px;
   }
 
   .xs-bor-b-on-sm {
-    border-bottom-width: 2px;
+    border-bottom: 2px;
   }
 
   .sm-bor-b-on-sm {
-    border-bottom-width: 3px;
+    border-bottom: 3px;
   }
 
   .md-bor-b-on-sm {
-    border-bottom-width: 4px;
+    border-bottom: 4px;
   }
 
   .lg-bor-b-on-sm {
-    border-bottom-width: 5px;
+    border-bottom: 5px;
   }
 
   .xl-bor-b-on-sm {
-    border-bottom-width: 6px;
+    border-bottom: 6px;
   }
 
   .xxl-bor-b-on-sm {
-    border-bottom-width: 7px;
+    border-bottom: 7px;
   }
 }
 @media screen and (max-width: 320px) {
@@ -9073,162 +9114,162 @@ ol > li:after,
    * border helpers
    */
   .no-bor-on-xs {
-    border-width: 0;
+    border: 0;
   }
 
   .xxs-bor-on-xs {
-    border-width: 1px;
+    border: 1px;
   }
 
   .xs-bor-on-xs {
-    border-width: 2px;
+    border: 2px;
   }
 
   .sm-bor-on-xs {
-    border-width: 3px;
+    border: 3px;
   }
 
   .md-bor-on-xs {
-    border-width: 4px;
+    border: 4px;
   }
 
   .lg-bor-on-xs {
-    border-width: 5px;
+    border: 5px;
   }
 
   .xl-bor-on-xs {
-    border-width: 6px;
+    border: 6px;
   }
 
   .xxl-bor-on-xs {
-    border-width: 7px;
+    border: 7px;
   }
 
   .no-bor-l-on-xs {
-    border-left-width: 0;
+    border-left: 0;
   }
 
   .xxs-bor-l-on-xs {
-    border-left-width: 1px;
+    border-left: 1px;
   }
 
   .xs-bor-l-on-xs {
-    border-left-width: 2px;
+    border-left: 2px;
   }
 
   .sm-bor-l-on-xs {
-    border-left-width: 3px;
+    border-left: 3px;
   }
 
   .md-bor-l-on-xs {
-    border-left-width: 4px;
+    border-left: 4px;
   }
 
   .lg-bor-l-on-xs {
-    border-left-width: 5px;
+    border-left: 5px;
   }
 
   .xl-bor-l-on-xs {
-    border-left-width: 6px;
+    border-left: 6px;
   }
 
   .xxl-bor-l-on-xs {
-    border-left-width: 7px;
+    border-left: 7px;
   }
 
   .no-bor-t-on-xs {
-    border-top-width: 0;
+    border-top: 0;
   }
 
   .xxs-bor-t-on-xs {
-    border-top-width: 1px;
+    border-top: 1px;
   }
 
   .xs-bor-t-on-xs {
-    border-top-width: 2px;
+    border-top: 2px;
   }
 
   .sm-bor-t-on-xs {
-    border-top-width: 3px;
+    border-top: 3px;
   }
 
   .md-bor-t-on-xs {
-    border-top-width: 4px;
+    border-top: 4px;
   }
 
   .lg-bor-t-on-xs {
-    border-top-width: 5px;
+    border-top: 5px;
   }
 
   .xl-bor-t-on-xs {
-    border-top-width: 6px;
+    border-top: 6px;
   }
 
   .xxl-bor-t-on-xs {
-    border-top-width: 7px;
+    border-top: 7px;
   }
 
   .no-bor-r-on-xs {
-    border-right-width: 0;
+    border-right: 0;
   }
 
   .xxs-bor-r-on-xs {
-    border-right-width: 1px;
+    border-right: 1px;
   }
 
   .xs-bor-r-on-xs {
-    border-right-width: 2px;
+    border-right: 2px;
   }
 
   .sm-bor-r-on-xs {
-    border-right-width: 3px;
+    border-right: 3px;
   }
 
   .md-bor-r-on-xs {
-    border-right-width: 4px;
+    border-right: 4px;
   }
 
   .lg-bor-r-on-xs {
-    border-right-width: 5px;
+    border-right: 5px;
   }
 
   .xl-bor-r-on-xs {
-    border-right-width: 6px;
+    border-right: 6px;
   }
 
   .xxl-bor-r-on-xs {
-    border-right-width: 7px;
+    border-right: 7px;
   }
 
   .no-bor-b-on-xs {
-    border-bottom-width: 0;
+    border-bottom: 0;
   }
 
   .xxs-bor-b-on-xs {
-    border-bottom-width: 1px;
+    border-bottom: 1px;
   }
 
   .xs-bor-b-on-xs {
-    border-bottom-width: 2px;
+    border-bottom: 2px;
   }
 
   .sm-bor-b-on-xs {
-    border-bottom-width: 3px;
+    border-bottom: 3px;
   }
 
   .md-bor-b-on-xs {
-    border-bottom-width: 4px;
+    border-bottom: 4px;
   }
 
   .lg-bor-b-on-xs {
-    border-bottom-width: 5px;
+    border-bottom: 5px;
   }
 
   .xl-bor-b-on-xs {
-    border-bottom-width: 6px;
+    border-bottom: 6px;
   }
 
   .xxl-bor-b-on-xs {
-    border-bottom-width: 7px;
+    border-bottom: 7px;
   }
 }
