@@ -2142,6 +2142,12 @@ hr {
 .theme-styleguide .code-block pre {
   font-style: normal;
 }
+.theme-styleguide .code-block-simple {
+  padding: 20px;
+  background: #ddd;
+  font-family: Courier, monospace;
+  font-size: 14px;
+}
 .theme-styleguide .demo-grid .row {
   margin-bottom: 5px;
 }
