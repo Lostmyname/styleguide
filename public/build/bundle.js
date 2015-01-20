@@ -19237,7 +19237,7 @@ window.Collapsible = module.exports = (function () {
 },{}],9:[function(require,module,exports){
 'use strict';
 
-var $ = require('jquery');
+//var $ = require('jquery');
 var gallery = module.exports = {};
 
 /**
@@ -19334,7 +19334,7 @@ $(document).on(window.READY || 'ready', function () {
   $('[data-key="gallery"]').gallerise();
 });
 
-},{"jquery":7}],10:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports=require(7)
 },{"/Users/barneyfox/Sites/styleguide/node_modules/jquery/dist/jquery.js":7}],11:[function(require,module,exports){
 /*

@@ -44,7 +44,6 @@ gulp.task('scss', function () {
       sass: './src/scss'
     }))
     .pipe(plugins.autoprefixer())
-//    .pipe(plugins.minifyCss())
     .pipe(gulp.dest('./public/build'));
 });
 
@@ -55,6 +54,11 @@ gulp.task('fileinclude', function () {
       basepath: '@file'
     }))
     .pipe(gulp.dest('./public'));
+});
+
+gulp.task('fonts', function () {
+  gulp.src('./node_modules/lmn.jester.theme.*/src/base/font/**/*.{ttf,woff,eof,svg}')
+  .pipe(gulp.dest('./public/build/'));
 });
 
 gulp.task('default', ['js', 'scss', 'fileinclude'], function () {
