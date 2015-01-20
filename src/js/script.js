@@ -11,6 +11,7 @@ require('../../node_modules/lmn.jester.component.swiper/src/js/jester.component.
 var Video = require('../../node_modules/lmn.jester.component.video/src/js/jester.component.video');
 var Collapsible = require('../../node_modules/lmn.jester.component.collapsible/src/js/jester.component.collapsible');
 require('../../node_modules/lmn.jester.component.tab/src/js/jester.component.tab');
+require('../../node_modules/lmn.jester.component.gallery/src/js/gallery-simple');
 
 $(document).ready(function () {
 

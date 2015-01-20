@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v3.3.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -255,16 +254,18 @@ th {
  * Layout
  */
 /*
- * Typeography
+ * Typography
  * ---------------------------------------
- * Colour variable names should be generated here:
- * http://www.color-blindness.com/color-name-hue/
  */
 /*
  * Colours
  * ---------------------------------------
  * Colour variable names should be generated here:
  * http://www.color-blindness.com/color-name-hue/
+ */
+/*
+ * Forms
+ * ---------------------------------------
  */
 /*
  * Global Components
@@ -1003,10 +1004,8 @@ Pagination Styles
  * Layout
  */
 /*
- * Typeography
+ * Typography
  * ---------------------------------------
- * Colour variable names should be generated here:
- * http://www.color-blindness.com/color-name-hue/
  */
 /*
  * Colours
@@ -1014,32 +1013,278 @@ Pagination Styles
  * Colour variable names should be generated here:
  * http://www.color-blindness.com/color-name-hue/
  */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
+/*
+ * Forms
+ * ---------------------------------------
+ */
+html, .html {
+  font-size: 16px;
+}
+@media all and (max-width: 768px) {
+  html, .html {
+    font-size: 14.8px;
+  }
 }
 
-.input, input[type="text"],
+body, .body {
+  font-size: 16px;
+  font-family: "adelle-sans", sans-serif;
+  line-height: 1.5;
+  color: #333333;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@media all and (max-width: 768px) {
+  body, .body {
+    font-size: 14.8px;
+  }
+}
+
+article, .article {
+  margin-bottom: 1.25rem;
+}
+article:last-child, .article:last-child {
+  margin-bottom: 0;
+}
+
+.font-sans-serif, .ol > li > .ol-number, ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .ol > li > .ol-number {
+  font-family: "adelle-sans", sans-serif;
+}
+
+.font-serif, .ol > li, ol > li, .theme-default ol > li, .theme-default .ol > li {
+  font-family: "freight-text-pro", serif;
+}
+
+a, .a {
+  text-decoration: none;
+  color: #01b69b;
+  cursor: pointer;
+}
+a:hover, .a:hover {
+  text-decoration: underline;
+}
+
+p, .p {
+  font-family: "freight-text-pro", serif;
+  font-size: 1.25em;
+  height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+p:last-child, .p:last-child {
+  margin-bottom: 0;
+}
+p.small, .p.small {
+  font-size: 1em;
+}
+
+.font-sans-serif > p, .ol > li > .ol-number > p, ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .ol > li > .ol-number > p, .font-sans-serif > .p, .ol > li > .ol-number > .p, ol > li > .ol-number > .p {
+  font-family: "adelle-sans", sans-serif;
+}
+
+.p-li {
+  margin-bottom: 1.25rem;
+}
+.p-li:last-child {
+  margin-bottom: 0;
+}
+
+em, .italic {
+  font-style: italic;
+}
+
+.icon {
+  vertical-align: top;
+}
+
+.text-md, .ol > li, ol > li, .theme-default ol > li, .ol > li > .ol-number, ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .ol > li, .theme-default .ol > li > .ol-number {
+  font-size: 20px;
+}
+
+.h1 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 3.75rem;
+  margin-bottom: 1.875rem;
+  font-size: 4.125em;
+}
+.h1.huge {
+  line-height: 4.125rem;
+  margin-bottom: 2.0625rem;
+  font-size: 3.75em;
+}
+@media all and (max-width: 768px) {
+  .h1 {
+    font-size: 2.25em;
+    line-height: 2.5rem;
+  }
+}
+
+.h2 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 3.3125rem;
+  margin-bottom: 1.65625rem;
+  font-size: 3em;
+}
+@media all and (max-width: 992px) {
+  .h2 {
+    font-size: 1.875em;
+    line-height: 2.0625rem;
+  }
+}
+
+.h3 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 2.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 2.25em;
+}
+
+.h4 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 2.0625rem;
+  margin-bottom: 1.03125rem;
+  font-size: 1.875em;
+}
+
+.h5 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.625rem;
+  margin-bottom: 0.8125rem;
+  font-size: 1.5em;
+}
+
+.h6 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.375rem;
+  margin-bottom: 0.6875rem;
+  font-size: 1.25em;
+}
+
+.heading-dashed {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  border-style: dashed;
+  border-width: 0px 0px 2px 0px;
+  border-color: #d8d4c7;
+  color: #ff4a00;
+}
+p + .heading-dashed {
+  margin-top: 2.5rem;
+}
+
+.heading-brushed {
+  line-height: 1.625rem;
+  margin-bottom: 0.8125rem;
+  font-family: "freight-text-pro", serif;
+  margin-bottom: 2.375rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  background-image: url('../../images/dividers/dashed-line-133x2.svg');
+  background-repeat: no-repeat;
+  border: none;
+  background-position: bottom;
+  background-size: 130px 2px;
+  font-size: 1.5em;
+  font-weight: normal;
+  color: #666666;
+}
+p + .heading-brushed {
+  margin-top: 2.5rem;
+}
+
+.subheading {
+  font-family: "adelle-sans", sans-serif;
+  font-size: 1.25em;
+  height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+blockquote, .blockquote {
+  font-style: italic;
+  font-size: 1.875em;
+  line-height: 2.375rem;
+  margin: 1.25rem 0;
+  text-align: center;
+}
+
+figure, .figure {
+  margin: 0;
+  text-align: center;
+}
+
+.figcaption {
+  margin: 0.625rem 0 1.25rem;
+  font-size: 0.875em;
+  color: #999999;
+  text-align: center;
+}
+
+pre, .pre {
+  font-family: "adelle-sans", sans-serif;
+  display: block;
+  width: 100%;
+  white-space: pre-wrap;
+  font-style: italic;
+}
+
+.dropcap {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 3.75rem;
+  margin-bottom: 1.875rem;
+  font-size: 4.125em;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 0;
+  line-height: 0.9;
+}
+
+.text-indented {
+  display: block;
+  padding-left: 1.5625rem;
+  border-left: 0.3125rem solid #ff5510;
+  color: #ff5510;
+  margin-bottom: 1.25rem;
+}
+
+input[type="text"],
 input[type="email"],
-input[type="password"], .theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
+input[type="password"],
+.input {
   height: 2.5rem;
   padding: 0 0.625rem;
 }
 
-.select, select, .theme-default select {
+select {
   height: 2.5rem;
   padding: 0.625rem;
 }
 
-.textarea, textarea, .theme-default textarea {
+textarea {
   padding: 0.625rem;
 }
 
-.textarea-counter, .theme-default .textarea-counter {
+[data-count-target] {
+  padding-right: 2.5rem;
+}
+
+.textarea-counter {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -1053,21 +1298,16 @@ input[type="password"], .theme-default input[type="text"],
 .textarea-counter.is-negative {
   color: red;
 }
-textarea.no-highlight ~ .textarea-counter, .theme-default textarea.no-highlight ~ .textarea-counter {
+textarea.no-highlight ~ .textarea-counter {
   color: #999999;
 }
 
-.input-field, select,
+select,
 textarea,
 input[type="text"],
 input[type="email"],
 input[type="password"],
-.input,
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input, .theme-default select,
-.theme-default textarea {
+.input {
   max-width: 100%;
   background: white;
   border: 0.125rem solid #d8d4c7;
@@ -1075,33 +1315,8 @@ input[type="password"],
   outline: none;
   font-family: sans-serif;
   font-size: 0.9375em;
-  width: 100%;
 }
-.input-field.tiny, select.tiny,
-textarea.tiny,
-input.tiny[type="text"],
-input.tiny[type="email"],
-input.tiny[type="password"],
-.tiny.input {
-  width: 6.25rem;
-}
-.input-field.small, select.small,
-textarea.small,
-input.small[type="text"],
-input.small[type="email"],
-input.small[type="password"],
-.small.input {
-  width: 8.75rem;
-}
-.input-field.medium, select.medium,
-textarea.medium,
-input.medium[type="text"],
-input.medium[type="email"],
-input.medium[type="password"],
-.medium.input {
-  width: 11.25rem;
-}
-.input-field:focus, select:focus,
+select:focus,
 textarea:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -1109,102 +1324,85 @@ input[type="password"]:focus,
 .input:focus {
   border-color: #00aced;
 }
-.input-field.is-valid, select.is-valid,
+select.is-valid,
 textarea.is-valid,
-input.is-valid[type="text"],
-input.is-valid[type="email"],
-input.is-valid[type="password"],
-.is-valid.input {
+input[type="text"].is-valid,
+input[type="email"].is-valid,
+input[type="password"].is-valid,
+.input.is-valid {
   border-color: #01b69b;
 }
-.input-field.is-filled.is-invalid, select.is-filled.is-invalid,
-textarea.is-filled.is-invalid,
-input.is-filled.is-invalid[type="text"],
-input.is-filled.is-invalid[type="email"],
-input.is-filled.is-invalid[type="password"],
-.is-filled.is-invalid.input {
-  border-color: #ff4a00;
-}
-.input-field.no-highlight, select.no-highlight,
-textarea.no-highlight,
-input.no-highlight[type="text"],
-input.no-highlight[type="email"],
-input.no-highlight[type="password"],
-.no-highlight.input, .no-highlight .input-field, .no-highlight select,
-.no-highlight textarea,
-.no-highlight input[type="text"],
-.no-highlight input[type="email"],
-.no-highlight input[type="password"],
-.no-highlight .input, .no-highlight .theme-default select, .theme-default .no-highlight select,
-.no-highlight .theme-default textarea,
-.theme-default .no-highlight textarea {
+select.no-highlight, .no-highlight select,
+textarea.no-highlight, .no-highlight
+textarea,
+input[type="text"].no-highlight, .no-highlight
+input[type="text"],
+input[type="email"].no-highlight, .no-highlight
+input[type="email"],
+input[type="password"].no-highlight, .no-highlight
+input[type="password"],
+.input.no-highlight, .no-highlight
+.input {
   border-color: #d8d4c7;
 }
 
-.field-validate[data-validations], input[data-validations][type="text"],
-input[data-validations][type="email"],
-input[data-validations][type="password"],
-[data-validations].input {
+input[type="text"][data-validations],
+input[type="email"][data-validations],
+input[type="password"][data-validations],
+.input[data-validations] {
   padding-right: 2.25rem;
   background-image: url(image-path("icons/glyphs/validation-todo-20x20.svg"));
   background-repeat: no-repeat;
   background-position: right 0.5rem top 0.5rem;
 }
-.field-validate[data-validations].is-valid, input[data-validations].is-valid[type="text"],
-input[data-validations].is-valid[type="email"],
-input[data-validations].is-valid[type="password"],
-[data-validations].is-valid.input {
+input[type="text"][data-validations].is-valid,
+input[type="email"][data-validations].is-valid,
+input[type="password"][data-validations].is-valid,
+.input[data-validations].is-valid {
   background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
 }
-.field-validate[data-validations].is-filled.is-invalid, input[data-validations].is-filled.is-invalid[type="text"],
-input[data-validations].is-filled.is-invalid[type="email"],
-input[data-validations].is-filled.is-invalid[type="password"],
-[data-validations].is-filled.is-invalid.input {
+input[type="text"][data-validations].is-filled.is-invalid,
+input[type="email"][data-validations].is-filled.is-invalid,
+input[type="password"][data-validations].is-filled.is-invalid,
+.input[data-validations].is-filled.is-invalid {
   background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
 }
-[data-validation-icons="false"] .field-validate[data-validations], [data-validation-icons="false"] input[data-validations][type="text"],
-[data-validation-icons="false"] input[data-validations][type="email"],
-[data-validation-icons="false"] input[data-validations][type="password"],
-[data-validation-icons="false"] [data-validations].input {
+[data-validation-icons="false"] input[type="text"][data-validations], [data-validation-icons="false"]
+input[type="email"][data-validations], [data-validation-icons="false"]
+input[type="password"][data-validations], [data-validation-icons="false"]
+.input[data-validations] {
   background-image: none;
 }
 
-.control-group, .theme-default .control-group {
+.control-group {
   margin-bottom: 1.25rem;
 }
 .control-group:last-child {
   margin-bottom: 0;
 }
 
-.stacked-layout, .control-group label, .theme-default .control-group label,
+.control-group label,
 legend,
-.control-label,
-.theme-default legend,
-.theme-default .control-label {
+.control-label {
   display: inline-block;
   margin-bottom: 0.625rem;
   font-weight: 600;
 }
 
-.controls-inline label, .theme-default .controls-inline label,
+.controls-inline label,
 .controls-inline input,
-.theme-default .controls-inline input,
 .controls-inline .input,
-.controls-inline input[type="text"],
-.controls-inline input[type="email"],
-.controls-inline input[type="password"],
-.controls-inline select,
-.theme-default .controls-inline select {
+.controls-inline select {
   display: inline-block;
   width: auto;
 }
-.controls-inline label, .theme-default .controls-inline label {
+.controls-inline label {
+  display: block;
   margin-right: 0.625rem;
 }
 
-.radio, input[type="radio"],
-input[type="checkbox"], .theme-default input[type="radio"],
-.theme-default input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
   display: block;
   float: left;
   margin-top: 0.1875rem;
@@ -1212,15 +1410,13 @@ input[type="checkbox"], .theme-default input[type="radio"],
   cursor: pointer;
 }
 @media all and (max-width: 768px) {
-  .radio, input[type="radio"],
-  input[type="checkbox"], .theme-default input[type="radio"],
-  .theme-default input[type="checkbox"] {
+  input[type="radio"],
+  input[type="checkbox"] {
     margin-top: 0.3125rem;
   }
 }
-.radio + label, input[type="radio"] + label,
-input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
-.theme-default input[type="checkbox"] + label {
+input[type="radio"] + label,
+input[type="checkbox"] + label {
   display: block;
   margin-bottom: 0;
   overflow: hidden;
@@ -1228,34 +1424,12 @@ input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
   cursor: pointer;
 }
 
-.select.smallest, select.smallest {
-  width: auto;
-}
-
-.control-groups-spaced-small .control-group {
-  margin-bottom: 0.75301rem;
-}
-
-.error, .theme-default .error {
-  display: block;
-  margin-top: 0.3125rem;
-  color: #ff4a00;
-  font-size: 0.875em;
-}
-
 input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea,
 select,
-.input,
-input[type="text"],
-input[type="email"],
-input[type="password"],
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
+.input {
   width: 100%;
 }
 input[type="text"].tiny,
@@ -1263,10 +1437,7 @@ input[type="email"].tiny,
 input[type="password"].tiny,
 textarea.tiny,
 select.tiny,
-.input.tiny,
-input.tiny[type="text"],
-input.tiny[type="email"],
-input.tiny[type="password"] {
+.input.tiny {
   width: 6.25rem;
 }
 input[type="text"].small,
@@ -1274,10 +1445,7 @@ input[type="email"].small,
 input[type="password"].small,
 textarea.small,
 select.small,
-.input.small,
-input.small[type="text"],
-input.small[type="email"],
-input.small[type="password"] {
+.input.small {
   width: 8.75rem;
 }
 input[type="text"].medium,
@@ -1285,227 +1453,76 @@ input[type="email"].medium,
 input[type="password"].medium,
 textarea.medium,
 select.medium,
-.input.medium,
-input.medium[type="text"],
-input.medium[type="email"],
-input.medium[type="password"] {
+.input.medium {
   width: 11.25rem;
 }
 
-.font-sans-serif, .font-sans-serif > p, .body > p, body > p, .theme-default body > p, .heading > p, .h1 > p, .dropcap > p, .theme-default .dropcap > p, .theme-default .h1 > p, .h2 > p, .theme-default .h2 > p, .h3 > p, .theme-default .h3 > p, .h4 > p, .theme-default .h4 > p, .h5 > p, .theme-default .h5 > p, .h6 > p, .theme-default .h6 > p, .theme-default .heading > p, .ol > li > .ol-number > p, ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .body > p, .theme-default .ol > li > .ol-number > p, .font-sans-serif > .p, .body > .p, body > .p, .theme-default body > .p, .heading > .p, .h1 > .p, .dropcap > .p, .theme-default .dropcap > .p, .theme-default .h1 > .p, .h2 > .p, .theme-default .h2 > .p, .h3 > .p, .theme-default .h3 > .p, .h4 > .p, .theme-default .h4 > .p, .h5 > .p, .theme-default .h5 > .p, .h6 > .p, .theme-default .h6 > .p, .theme-default .heading > .p, .ol > li > .ol-number > .p, ol > li > .ol-number > .p, .theme-default ol > li > .ol-number > .p, .theme-default .body > .p, .theme-default .ol > li > .ol-number > .p, .font-sans-serif > .subheading, .body > .subheading, body > .subheading, .theme-default body > .subheading, .heading > .subheading, .h1 > .subheading, .dropcap > .subheading, .theme-default .dropcap > .subheading, .theme-default .h1 > .subheading, .h2 > .subheading, .theme-default .h2 > .subheading, .h3 > .subheading, .theme-default .h3 > .subheading, .h4 > .subheading, .theme-default .h4 > .subheading, .h5 > .subheading, .theme-default .h5 > .subheading, .h6 > .subheading, .theme-default .h6 > .subheading, .theme-default .heading > .subheading, .ol > li > .ol-number > .subheading, ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default .body > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > p,
-.theme-default .font-sans-serif > .p, .body, body, .theme-default body, .heading, .h1, .dropcap, .theme-default .dropcap, .theme-default .h1, .h2, .theme-default .h2, .h3, .theme-default .h3, .h4, .theme-default .h4, .h5, .theme-default .h5, .h6, .theme-default .h6, .theme-default .heading, .ol > li > .ol-number, ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .body, .theme-default .ol > li > .ol-number {
-  font-family: "adelle-sans", sans-serif;
+select.smallest {
+  width: auto;
 }
 
-.font-serif, .p, p, .subheading, .theme-default .subheading, .theme-default p,
-.theme-default .p, .italic, .blockquote, blockquote,
-blockquote p, .theme-default blockquote,
-.theme-default blockquote p, .theme-default .italic, .theme-default .blockquote,
-blockquote .theme-default p, .heading-brushed, .theme-default .heading-brushed, .ol > li, ol > li, .theme-default ol > li, .theme-default .ol > li {
-  font-family: "freight-text-pro", serif;
+.control-groups-spaced-small .control-group {
+  margin-bottom: 0.75301rem;
 }
 
-.base-font, .html, html, .theme-default html, .body, body, .theme-default body, .theme-default .html, .theme-default .body {
-  font-size: 16px;
-}
-@media all and (max-width: 768px) {
-  .base-font, .html, html, .theme-default html, .body, body, .theme-default body, .theme-default .html, .theme-default .body {
-    font-size: 14.8px;
-  }
-}
-
-.body, body, .theme-default body {
-  line-height: 1.5;
-  color: #333333;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.article, article, .theme-default article {
-  margin-bottom: 1.25rem;
-}
-.article:last-child, article:last-child {
-  margin-bottom: 0;
-}
-
-.a, a, .theme-default a {
-  text-decoration: none;
-  color: #01b69b;
-  cursor: pointer;
-}
-.a:hover, a:hover {
-  text-decoration: underline;
-}
-
-.p, p, .subheading, .theme-default .subheading, .theme-default p,
-.theme-default .p {
-  font-size: 1.25em;
-  §height: 1.5;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
-}
-.p:last-child, p:last-child, .subheading:last-child {
-  margin-bottom: 0;
-}
-.p.small, p.small, .small.subheading {
-  font-size: 1em;
-}
-
-.p-li, .p li, p li, .subheading li, .theme-default .subheading li, .theme-default p li,
-.theme-default .p li {
-  margin-bottom: 1.25rem;
-}
-.p-li:last-child, .p li:last-child, p li:last-child, .subheading li:last-child, .theme-default p li:last-child {
-  margin-bottom: 0;
-}
-
-.italic, .blockquote, blockquote,
-blockquote p, .theme-default blockquote,
-.theme-default blockquote p, .theme-default .italic, .theme-default .blockquote,
-blockquote .theme-default p {
-  font-style: italic;
-}
-
-.icon, .theme-default .icon {
-  vertical-align: top;
-}
-
-.text-md, .ol > li, ol > li, .theme-default ol > li, .ol > li > .ol-number, ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .text-md, .theme-default .ol > li, .theme-default .ol > li > .ol-number {
-  font-size: 20px;
-}
-
-.heading, .h1, .dropcap, .theme-default .dropcap, .theme-default .h1, .h2, .theme-default .h2, .h3, .theme-default .h3, .h4, .theme-default .h4, .h5, .theme-default .h5, .h6, .theme-default .h6, .theme-default .heading {
-  font-weight: bold;
-}
-
-.h1, .dropcap, .theme-default .dropcap, .theme-default .h1 {
-  line-height: 3.75rem;
-  margin-bottom: 1.875rem;
-  font-size: 4.125em;
-}
-.h1.huge, .huge.dropcap {
-  line-height: 4.125rem;
-  margin-bottom: 2.0625rem;
-  font-size: 3.75em;
-}
-@media all and (max-width: 768px) {
-  .h1, .dropcap, .theme-default .dropcap, .theme-default .h1 {
-    font-size: 2.25em;
-    line-height: 2.5rem;
-  }
-}
-
-.h2, .theme-default .h2 {
-  line-height: 3.3125rem;
-  margin-bottom: 1.65625rem;
-  font-size: 3em;
-}
-@media all and (max-width: 992px) {
-  .h2, .theme-default .h2 {
-    font-size: 1.875em;
-    line-height: 2.0625rem;
-  }
-}
-
-.h3, .theme-default .h3 {
-  line-height: 2.5rem;
-  margin-bottom: 1.25rem;
-  font-size: 2.25em;
-}
-
-.h4, .theme-default .h4 {
-  line-height: 2.0625rem;
-  margin-bottom: 1.03125rem;
-  font-size: 1.875em;
-}
-
-.h5, .theme-default .h5 {
-  line-height: 1.625rem;
-  margin-bottom: 0.8125rem;
-  font-size: 1.5em;
-}
-
-.h6, .theme-default .h6 {
-  line-height: 1.375rem;
-  margin-bottom: 0.6875rem;
-  font-size: 1.25em;
-}
-
-.heading-dashed, .theme-default .heading-dashed {
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  text-align: center;
-  border-style: dashed;
-  border-width: 0px 0px 2px 0px;
-  border-color: #d8d4c7;
+.error {
+  display: block;
+  margin-top: 0.3125rem;
   color: #ff4a00;
-}
-p + .heading-dashed, .theme-default p + .heading-dashed {
-  margin-top: 2.5rem;
-}
-
-.heading-brushed, .theme-default .heading-brushed {
-  line-height: 1.625rem;
-  margin-bottom: 0.8125rem;
-  margin-bottom: 2.375rem;
-  padding-bottom: 1rem;
-  text-align: center;
-  background-image: url('../../images/dividers/dashed-line-133x2.svg');
-  background-repeat: no-repeat;
-  border: none;
-  background-position: bottom;
-  background-size: 130px 2px;
-  font-size: 1.5em;
-  font-weight: normal;
-  color: #666666;
-}
-p + .heading-brushed, .theme-default p + .heading-brushed {
-  margin-top: 2.5rem;
-}
-
-.blockquote, blockquote,
-blockquote p, .theme-default blockquote,
-.theme-default blockquote p {
-  font-size: 1.875em;
-  line-height: 2.375rem;
-  margin: 1.25rem 0;
-  text-align: center;
-}
-
-.figure, figure, .theme-default figure {
-  margin: 0;
-  text-align: center;
-}
-
-.figcaption, figcaption, .theme-default figcaption {
-  margin: 0.625rem 0 1.25rem;
   font-size: 0.875em;
-  color: #999999;
-  text-align: center;
 }
 
-.pre, pre, .theme-default pre {
-  width: 100%;
+.labels-infield {
   display: block;
-  font-family: "adelle-sans";
-  white-space: pre-wrap;
-  font-style: italic;
+  position: relative;
 }
-
-.dropcap, .theme-default .dropcap {
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 0;
-  line-height: 0.9;
+.labels-infield label {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0.75rem;
+  line-height: 2.5rem;
+  margin: 0;
+  font-size: 0.875em;
+  font-weight: normal;
+  color: #555555;
+  cursor: text;
 }
-
-.text-indented, .theme-default .text-indented {
-  display: block;
-  padding-left: 1.5625rem;
-  border-left: 0.3125rem solid #ff5510;
-  color: #ff5510;
-  margin-bottom: 1.25rem;
+.labels-infield label:after {
+  content: ":";
+}
+.labels-infield input::-webkit-input-placeholder {
+  color: white;
+}
+.labels-infield input::-moz-placeholder {
+  color: white;
+}
+.labels-infield input:-ms-input-placeholder {
+  color: white;
+}
+.labels-infield input::placeholder {
+  color: white;
+}
+.labels-infield.input-is-focused label, .labels-infield.input-is-dirty label {
+  top: -0.3125rem;
+  line-height: 0.625rem;
+  left: auto;
+  right: 0.625rem;
+  padding: 0 0.25rem;
+  background: white;
+  font-size: 0.75em;
+}
+.labels-infield.input-is-focused label:after, .labels-infield.input-is-dirty label:after {
+  content: "";
+}
+.labels-infield.input-is-focused label {
+  color: #0092c9;
+}
+.labels-infield.input-is-valid label {
+  color: #01927d;
+}
+.labels-infield.input-is-invalid.input-is-filled label {
+  color: #db4000;
 }
 
 .icon-alarm:before {
@@ -1820,229 +1837,6 @@ blockquote p, .theme-default blockquote,
   margin-left: 0.25rem;
 }
 
-.input, input[type="text"],
-input[type="email"],
-input[type="password"], .theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  height: 2.5rem;
-  padding: 0 0.625rem;
-}
-
-.select, select, .theme-default select {
-  height: 2.5rem;
-  padding: 0.625rem;
-}
-
-.textarea, textarea, .theme-default textarea {
-  padding: 0.625rem;
-}
-
-.textarea-counter, .theme-default .textarea-counter {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 8px 12px;
-  text-align: right;
-  font-family: monospace;
-  letter-spacing: -1px;
-  color: #01b69b;
-  pointer-events: none;
-}
-.textarea-counter.is-negative {
-  color: red;
-}
-textarea.no-highlight ~ .textarea-counter, .theme-default textarea.no-highlight ~ .textarea-counter {
-  color: #999999;
-}
-
-.input-field, select,
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="password"],
-.input,
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input, .theme-default select,
-.theme-default textarea {
-  max-width: 100%;
-  background: white;
-  border: 0.125rem solid #d8d4c7;
-  border-radius: 0.1875rem;
-  outline: none;
-  font-family: sans-serif;
-  font-size: 0.9375em;
-  width: 100%;
-}
-.input-field.tiny, select.tiny,
-textarea.tiny,
-input.tiny[type="text"],
-input.tiny[type="email"],
-input.tiny[type="password"],
-.tiny.input {
-  width: 6.25rem;
-}
-.input-field.small, select.small,
-textarea.small,
-input.small[type="text"],
-input.small[type="email"],
-input.small[type="password"],
-.small.input {
-  width: 8.75rem;
-}
-.input-field.medium, select.medium,
-textarea.medium,
-input.medium[type="text"],
-input.medium[type="email"],
-input.medium[type="password"],
-.medium.input {
-  width: 11.25rem;
-}
-.input-field:focus, select:focus,
-textarea:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-.input:focus {
-  border-color: #00aced;
-}
-.input-field.is-valid, select.is-valid,
-textarea.is-valid,
-input.is-valid[type="text"],
-input.is-valid[type="email"],
-input.is-valid[type="password"],
-.is-valid.input {
-  border-color: #01b69b;
-}
-.input-field.is-filled.is-invalid, select.is-filled.is-invalid,
-textarea.is-filled.is-invalid,
-input.is-filled.is-invalid[type="text"],
-input.is-filled.is-invalid[type="email"],
-input.is-filled.is-invalid[type="password"],
-.is-filled.is-invalid.input {
-  border-color: #ff4a00;
-}
-.input-field.no-highlight, select.no-highlight,
-textarea.no-highlight,
-input.no-highlight[type="text"],
-input.no-highlight[type="email"],
-input.no-highlight[type="password"],
-.no-highlight.input, .no-highlight .input-field, .no-highlight select,
-.no-highlight textarea,
-.no-highlight input[type="text"],
-.no-highlight input[type="email"],
-.no-highlight input[type="password"],
-.no-highlight .input, .no-highlight .theme-default select, .theme-default .no-highlight select,
-.no-highlight .theme-default textarea,
-.theme-default .no-highlight textarea {
-  border-color: #d8d4c7;
-}
-
-.field-validate[data-validations], input[data-validations][type="text"],
-input[data-validations][type="email"],
-input[data-validations][type="password"],
-[data-validations].input {
-  padding-right: 2.25rem;
-  background-image: url(image-path("icons/glyphs/validation-todo-20x20.svg"));
-  background-repeat: no-repeat;
-  background-position: right 0.5rem top 0.5rem;
-}
-.field-validate[data-validations].is-valid, input[data-validations].is-valid[type="text"],
-input[data-validations].is-valid[type="email"],
-input[data-validations].is-valid[type="password"],
-[data-validations].is-valid.input {
-  background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
-}
-.field-validate[data-validations].is-filled.is-invalid, input[data-validations].is-filled.is-invalid[type="text"],
-input[data-validations].is-filled.is-invalid[type="email"],
-input[data-validations].is-filled.is-invalid[type="password"],
-[data-validations].is-filled.is-invalid.input {
-  background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
-}
-[data-validation-icons="false"] .field-validate[data-validations], [data-validation-icons="false"] input[data-validations][type="text"],
-[data-validation-icons="false"] input[data-validations][type="email"],
-[data-validation-icons="false"] input[data-validations][type="password"],
-[data-validation-icons="false"] [data-validations].input {
-  background-image: none;
-}
-
-.control-group, .theme-default .control-group {
-  margin-bottom: 1.25rem;
-}
-.control-group:last-child {
-  margin-bottom: 0;
-}
-
-.stacked-layout, .control-group label, .theme-default .control-group label,
-legend,
-.control-label,
-.theme-default legend,
-.theme-default .control-label {
-  display: inline-block;
-  margin-bottom: 0.625rem;
-  font-weight: 600;
-}
-
-.controls-inline label, .theme-default .controls-inline label,
-.controls-inline input,
-.theme-default .controls-inline input,
-.controls-inline .input,
-.controls-inline input[type="text"],
-.controls-inline input[type="email"],
-.controls-inline input[type="password"],
-.controls-inline select,
-.theme-default .controls-inline select {
-  display: inline-block;
-  width: auto;
-}
-.controls-inline label, .theme-default .controls-inline label {
-  margin-right: 0.625rem;
-}
-
-.radio, input[type="radio"],
-input[type="checkbox"], .theme-default input[type="radio"],
-.theme-default input[type="checkbox"] {
-  display: block;
-  float: left;
-  margin-top: 0.1875rem;
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-@media all and (max-width: 768px) {
-  .radio, input[type="radio"],
-  input[type="checkbox"], .theme-default input[type="radio"],
-  .theme-default input[type="checkbox"] {
-    margin-top: 0.3125rem;
-  }
-}
-.radio + label, input[type="radio"] + label,
-input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
-.theme-default input[type="checkbox"] + label {
-  display: block;
-  margin-bottom: 0;
-  overflow: hidden;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.select.smallest, select.smallest {
-  width: auto;
-}
-
-.control-groups-spaced-small .control-group {
-  margin-bottom: 0.75301rem;
-}
-
-.error, .theme-default .error {
-  display: block;
-  margin-top: 0.3125rem;
-  color: #ff4a00;
-  font-size: 0.875em;
-}
-
 .ol, ol, .theme-default ol {
   list-style: none;
   margin-left: 0;
@@ -2072,16 +1866,18 @@ input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
  * Layout
  */
 /*
- * Typeography
+ * Typography
  * ---------------------------------------
- * Colour variable names should be generated here:
- * http://www.color-blindness.com/color-name-hue/
  */
 /*
  * Colours
  * ---------------------------------------
  * Colour variable names should be generated here:
  * http://www.color-blindness.com/color-name-hue/
+ */
+/*
+ * Forms
+ * ---------------------------------------
  */
 .button {
   background: #d8d4c7;
@@ -2178,6 +1974,22 @@ input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
   background: rgba(255, 255, 255, 0.1);
 }
 
+.button.hover {
+  border: none;
+  background: none;
+  transition: 0.3s;
+  text-transform: none;
+}
+.button.hover:hover {
+  background: #f6f5f1;
+  box-shadow: 0 3px #e8e5db;
+}
+.button.hover:active {
+  background: #ffce35;
+  box-shadow: 0 3px #ffc511;
+  transition: none;
+}
+
 .button-share-facebook {
   background-color: #3b5998;
 }
@@ -2188,16 +2000,6 @@ input[type="checkbox"] + label, .theme-default input[type="radio"] + label,
 
 .button-share-email {
   background-color: #d8d4c7;
-}
-
-.button.hover {
-  border: none;
-  background: none;
-  transition: 0.3s;
-  text-transform: none;
-}
-.button.hover:active {
-  transition: none;
 }
 
 .button.disabled,
@@ -2360,18 +2162,8 @@ hr {
   display: block;
   margin: 0 0 1px 0;
 }
-.theme-styleguide .nav li > a {
-  display: block;
-  background: #f6f5f1;
-  color: #222222;
-  padding: 10px;
-  border-bottom-right-radius: 8px;
-  font-weight: bold;
+.theme-styleguide .nav li > .button {
   width: 100%;
-}
-.theme-styleguide .nav li > a:hover {
-  text-decoration: none;
-  background: white;
 }
 
 /*
@@ -2383,25 +2175,25 @@ hr {
    * Layout
    */
   /*
-   * Typeography
+   * Typography
    * ---------------------------------------
-   * Colour variable names should be generated here:
-   * http://www.color-blindness.com/color-name-hue/
    */
   /*
    * Colours
    * ---------------------------------------
    * Colour variable names should be generated here:
    * http://www.color-blindness.com/color-name-hue/
+   */
+  /*
+   * Forms
+   * ---------------------------------------
    */
   /*
    * Layout
    */
   /*
-   * Typeography
+   * Typography
    * ---------------------------------------
-   * Colour variable names should be generated here:
-   * http://www.color-blindness.com/color-name-hue/
    */
   /*
    * Colours
@@ -2409,346 +2201,107 @@ hr {
    * Colour variable names should be generated here:
    * http://www.color-blindness.com/color-name-hue/
    */
+  /*
+   * Forms
+   * ---------------------------------------
+   */
 }
-.theme-default h1, .theme-default h2, .theme-default h3, .theme-default h4, .theme-default h5, .theme-default h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  height: 2.5rem;
-  padding: 0 0.625rem;
-}
-.theme-default .select, .theme-default select {
-  height: 2.5rem;
-  padding: 0.625rem;
-}
-.theme-default .textarea, .theme-default textarea {
-  padding: 0.625rem;
-}
-.theme-default .textarea-counter {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 8px 12px;
-  text-align: right;
-  font-family: monospace;
-  letter-spacing: -1px;
-  color: #01b69b;
-  pointer-events: none;
-}
-.theme-default .is-negative.textarea-counter {
-  color: red;
-}
-textarea.no-highlight ~ .theme-default .textarea-counter {
-  color: #999999;
-}
-.theme-default .input-field, .theme-default select,
-.theme-default textarea,
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  max-width: 100%;
-  background: white;
-  border: 0.125rem solid #d8d4c7;
-  border-radius: 0.1875rem;
-  outline: none;
-  font-family: sans-serif;
-  font-size: 0.9375em;
-  width: 100%;
-}
-.theme-default .input-field.tiny, .theme-default select.tiny,
-.theme-default textarea.tiny,
-.theme-default input.tiny[type="text"],
-.theme-default input.tiny[type="email"],
-.theme-default input.tiny[type="password"],
-.theme-default .tiny.input {
-  width: 6.25rem;
-}
-.theme-default .input-field.small, .theme-default select.small,
-.theme-default textarea.small,
-.theme-default input.small[type="text"],
-.theme-default input.small[type="email"],
-.theme-default input.small[type="password"],
-.theme-default .small.input {
-  width: 8.75rem;
-}
-.theme-default .input-field.medium, .theme-default select.medium,
-.theme-default textarea.medium,
-.theme-default input.medium[type="text"],
-.theme-default input.medium[type="email"],
-.theme-default input.medium[type="password"],
-.theme-default .medium.input {
-  width: 11.25rem;
-}
-.theme-default .input-field:focus, .theme-default select:focus,
-.theme-default textarea:focus,
-.theme-default input[type="text"]:focus,
-.theme-default input[type="email"]:focus,
-.theme-default input[type="password"]:focus,
-.theme-default .input:focus {
-  border-color: #00aced;
-}
-.theme-default .input-field.is-valid, .theme-default select.is-valid,
-.theme-default textarea.is-valid,
-.theme-default input.is-valid[type="text"],
-.theme-default input.is-valid[type="email"],
-.theme-default input.is-valid[type="password"],
-.theme-default .is-valid.input {
-  border-color: #01b69b;
-}
-.theme-default .input-field.is-filled.is-invalid, .theme-default select.is-filled.is-invalid,
-.theme-default textarea.is-filled.is-invalid,
-.theme-default input.is-filled.is-invalid[type="text"],
-.theme-default input.is-filled.is-invalid[type="email"],
-.theme-default input.is-filled.is-invalid[type="password"],
-.theme-default .is-filled.is-invalid.input {
-  border-color: #ff4a00;
-}
-.theme-default .input-field.no-highlight, .theme-default select.no-highlight,
-.theme-default textarea.no-highlight,
-.theme-default input.no-highlight[type="text"],
-.theme-default input.no-highlight[type="email"],
-.theme-default input.no-highlight[type="password"],
-.theme-default .no-highlight.input, .no-highlight .theme-default .input-field, .no-highlight .theme-default select,
-.no-highlight .theme-default textarea,
-.no-highlight .theme-default input[type="text"],
-.no-highlight .theme-default input[type="email"],
-.no-highlight .theme-default input[type="password"],
-.no-highlight .theme-default .input, .no-highlight .theme-default select,
-.no-highlight .theme-default textarea {
-  border-color: #d8d4c7;
-}
-.theme-default .field-validate[data-validations], .theme-default input[data-validations][type="text"],
-.theme-default input[data-validations][type="email"],
-.theme-default input[data-validations][type="password"],
-.theme-default [data-validations].input {
-  padding-right: 2.25rem;
-  background-image: url(image-path("icons/glyphs/validation-todo-20x20.svg"));
-  background-repeat: no-repeat;
-  background-position: right 0.5rem top 0.5rem;
-}
-.theme-default .field-validate[data-validations].is-valid, .theme-default input[data-validations].is-valid[type="text"],
-.theme-default input[data-validations].is-valid[type="email"],
-.theme-default input[data-validations].is-valid[type="password"],
-.theme-default [data-validations].is-valid.input {
-  background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
-}
-.theme-default .field-validate[data-validations].is-filled.is-invalid, .theme-default input[data-validations].is-filled.is-invalid[type="text"],
-.theme-default input[data-validations].is-filled.is-invalid[type="email"],
-.theme-default input[data-validations].is-filled.is-invalid[type="password"],
-.theme-default [data-validations].is-filled.is-invalid.input {
-  background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
-}
-[data-validation-icons="false"] .theme-default .field-validate[data-validations], [data-validation-icons="false"] .theme-default input[data-validations][type="text"],
-[data-validation-icons="false"] .theme-default input[data-validations][type="email"],
-[data-validation-icons="false"] .theme-default input[data-validations][type="password"],
-[data-validation-icons="false"] .theme-default [data-validations].input {
-  background-image: none;
-}
-.theme-default .control-group {
-  margin-bottom: 1.25rem;
-}
-.theme-default .control-group:last-child {
-  margin-bottom: 0;
-}
-.theme-default .stacked-layout, .control-group .theme-default label, .theme-default .control-group label,
-.theme-default legend,
-.theme-default .control-label {
-  display: inline-block;
-  margin-bottom: 0.625rem;
-  font-weight: 600;
-}
-.theme-default .controls-inline label,
-.theme-default .controls-inline input,
-.theme-default .controls-inline input[type="text"],
-.theme-default .controls-inline input[type="email"],
-.theme-default .controls-inline input[type="password"],
-.theme-default .controls-inline .input,
-.theme-default .controls-inline select {
-  display: inline-block;
-  width: auto;
-}
-.theme-default .controls-inline label {
-  margin-right: 0.625rem;
-}
-.theme-default .radio, .theme-default input[type="radio"],
-.theme-default input[type="checkbox"] {
-  display: block;
-  float: left;
-  margin-top: 0.1875rem;
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-@media all and (max-width: 768px) {
-  .theme-default .radio, .theme-default input[type="radio"],
-  .theme-default input[type="checkbox"] {
-    margin-top: 0.3125rem;
-  }
-}
-.theme-default .radio + label, .theme-default input[type="radio"] + label,
-.theme-default input[type="checkbox"] + label {
-  display: block;
-  margin-bottom: 0;
-  overflow: hidden;
-  font-weight: 500;
-  cursor: pointer;
-}
-.theme-default .select.smallest, .theme-default select.smallest {
-  width: auto;
-}
-.theme-default .control-groups-spaced-small .control-group {
-  margin-bottom: 0.75301rem;
-}
-.theme-default .error {
-  display: block;
-  margin-top: 0.3125rem;
-  color: #ff4a00;
-  font-size: 0.875em;
-}
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default textarea,
-.theme-default select,
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  width: 100%;
-}
-.theme-default input[type="text"].tiny,
-.theme-default input[type="email"].tiny,
-.theme-default input[type="password"].tiny,
-.theme-default textarea.tiny,
-.theme-default select.tiny,
-.theme-default input.tiny[type="text"],
-.theme-default input.tiny[type="email"],
-.theme-default input.tiny[type="password"],
-.theme-default .tiny.input {
-  width: 6.25rem;
-}
-.theme-default input[type="text"].small,
-.theme-default input[type="email"].small,
-.theme-default input[type="password"].small,
-.theme-default textarea.small,
-.theme-default select.small,
-.theme-default input.small[type="text"],
-.theme-default input.small[type="email"],
-.theme-default input.small[type="password"],
-.theme-default .small.input {
-  width: 8.75rem;
-}
-.theme-default input[type="text"].medium,
-.theme-default input[type="email"].medium,
-.theme-default input[type="password"].medium,
-.theme-default textarea.medium,
-.theme-default select.medium,
-.theme-default input.medium[type="text"],
-.theme-default input.medium[type="email"],
-.theme-default input.medium[type="password"],
-.theme-default .medium.input {
-  width: 11.25rem;
-}
-.theme-default .font-sans-serif, .theme-default .font-sans-serif > p, .theme-default .body > p, .theme-default body > p, .theme-default body > p, .theme-default .heading > p, .theme-default .h1 > p, .theme-default .dropcap > p, .theme-default .dropcap > p, .theme-default .h1 > p, .theme-default .h2 > p, .theme-default .h2 > p, .theme-default .h3 > p, .theme-default .h3 > p, .theme-default .h4 > p, .theme-default .h4 > p, .theme-default .h5 > p, .theme-default .h5 > p, .theme-default .h6 > p, .theme-default .h6 > p, .theme-default .heading > p, .theme-default .ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default ol > li > .ol-number > p, .theme-default .body > p, .theme-default .ol > li > .ol-number > p, .theme-default .font-sans-serif > .p, .theme-default .body > .p, .theme-default body > .p, .theme-default body > .p, .theme-default .heading > .p, .theme-default .h1 > .p, .theme-default .dropcap > .p, .theme-default .dropcap > .p, .theme-default .h1 > .p, .theme-default .h2 > .p, .theme-default .h2 > .p, .theme-default .h3 > .p, .theme-default .h3 > .p, .theme-default .h4 > .p, .theme-default .h4 > .p, .theme-default .h5 > .p, .theme-default .h5 > .p, .theme-default .h6 > .p, .theme-default .h6 > .p, .theme-default .heading > .p, .theme-default .ol > li > .ol-number > .p, .theme-default ol > li > .ol-number > .p, .theme-default ol > li > .ol-number > .p, .theme-default .body > .p, .theme-default .ol > li > .ol-number > .p, .theme-default .font-sans-serif > .subheading, .theme-default .body > .subheading, .theme-default body > .subheading, .theme-default body > .subheading, .theme-default .heading > .subheading, .theme-default .h1 > .subheading, .theme-default .dropcap > .subheading, .theme-default .dropcap > .subheading, .theme-default .h1 > .subheading, .theme-default .h2 > .subheading, .theme-default .h2 > .subheading, .theme-default .h3 > .subheading, .theme-default .h3 > .subheading, .theme-default .h4 > .subheading, .theme-default .h4 > .subheading, .theme-default .h5 > .subheading, .theme-default .h5 > .subheading, .theme-default .h6 > .subheading, .theme-default .h6 > .subheading, .theme-default .heading > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default ol > li > .ol-number > .subheading, .theme-default .body > .subheading, .theme-default .ol > li > .ol-number > .subheading, .theme-default .font-sans-serif > .subheading, .theme-default .font-sans-serif > p,
-.theme-default .font-sans-serif > .p, .theme-default .body, .theme-default body, .theme-default body, .theme-default .heading, .theme-default .h1, .theme-default .dropcap, .theme-default .dropcap, .theme-default .h1, .theme-default .h2, .theme-default .h2, .theme-default .h3, .theme-default .h3, .theme-default .h4, .theme-default .h4, .theme-default .h5, .theme-default .h5, .theme-default .h6, .theme-default .h6, .theme-default .heading, .theme-default .ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default ol > li > .ol-number, .theme-default .body, .theme-default .ol > li > .ol-number {
-  font-family: "adelle-sans", sans-serif;
-}
-.theme-default .font-serif, .theme-default p, .theme-default .subheading,
-.theme-default .p, .theme-default blockquote,
-.theme-default blockquote p,
-blockquote .theme-default p, .theme-default .italic, .theme-default .blockquote,
-blockquote .theme-default p, .theme-default .heading-brushed, .theme-default ol > li, .theme-default .ol > li {
-  font-family: "freight-text-pro", serif;
-}
-.theme-default .base-font, .theme-default html, .theme-default body, .theme-default .html, .theme-default .body {
+.theme-default html, .theme-default .html {
   font-size: 16px;
 }
 @media all and (max-width: 768px) {
-  .theme-default .base-font, .theme-default html, .theme-default body, .theme-default .html, .theme-default .body {
+  .theme-default html, .theme-default .html {
     font-size: 14.8px;
   }
 }
-.theme-default .body, .theme-default body {
+.theme-default body, .theme-default .body {
+  font-size: 16px;
+  font-family: "adelle-sans", sans-serif;
   line-height: 1.5;
   color: #333333;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.theme-default .article, .theme-default article {
+@media all and (max-width: 768px) {
+  .theme-default body, .theme-default .body {
+    font-size: 14.8px;
+  }
+}
+.theme-default article, .theme-default .article {
   margin-bottom: 1.25rem;
 }
-.theme-default .article:last-child, .theme-default article:last-child {
+.theme-default article:last-child, .theme-default .article:last-child {
   margin-bottom: 0;
 }
-.theme-default .a, .theme-default a {
+.theme-default .font-sans-serif, .theme-default ol > li > .ol-number, .theme-default .ol > li > .ol-number {
+  font-family: "adelle-sans", sans-serif;
+}
+.theme-default .font-serif, .theme-default ol > li, .theme-default .ol > li {
+  font-family: "freight-text-pro", serif;
+}
+.theme-default a, .theme-default .a {
   text-decoration: none;
   color: #01b69b;
   cursor: pointer;
 }
-.theme-default .a:hover, .theme-default a:hover {
+.theme-default a:hover, .theme-default .a:hover {
   text-decoration: underline;
 }
-.theme-default p, .theme-default .subheading,
-.theme-default .p {
+.theme-default p, .theme-default .p {
+  font-family: "freight-text-pro", serif;
   font-size: 1.25em;
-  §height: 1.5;
+  height: 1.5;
   margin-top: 0;
   margin-bottom: 1.25rem;
 }
-.theme-default p:last-child,
-.theme-default .p:last-child, .theme-default .subheading:last-child {
+.theme-default p:last-child, .theme-default .p:last-child {
   margin-bottom: 0;
 }
-.theme-default p.small,
-.theme-default .small.p, .theme-default .small.subheading {
+.theme-default p.small, .theme-default .p.small {
   font-size: 1em;
 }
-.theme-default .p-li, .p .theme-default li, .theme-default p li, p .theme-default li, .subheading .theme-default li, .theme-default .subheading li,
-.theme-default .p li {
+.theme-default .font-sans-serif > p, .theme-default ol > li > .ol-number > p, .theme-default .ol > li > .ol-number > p, .theme-default .font-sans-serif > .p, .theme-default ol > li > .ol-number > .p, .theme-default .ol > li > .ol-number > .p {
+  font-family: "adelle-sans", sans-serif;
+}
+.theme-default .p-li {
   margin-bottom: 1.25rem;
 }
-.theme-default .p-li:last-child, .p .theme-default li:last-child, .theme-default p li:last-child, p .theme-default li:last-child, .subheading .theme-default li:last-child, .theme-default .subheading li:last-child,
-.theme-default .p li:last-child {
+.theme-default .p-li:last-child {
   margin-bottom: 0;
 }
-.theme-default blockquote,
-.theme-default blockquote p,
-blockquote .theme-default p, .theme-default .italic, .theme-default .blockquote,
-blockquote .theme-default p {
+.theme-default em, .theme-default .italic {
   font-style: italic;
 }
 .theme-default .icon {
   vertical-align: top;
 }
-.theme-default ol > li, .theme-default ol > li > .ol-number, .theme-default .text-md, .theme-default .ol > li, .theme-default .ol > li > .ol-number {
+.theme-default .text-md, .theme-default ol > li, .theme-default ol > li > .ol-number, .theme-default .ol > li, .theme-default .ol > li > .ol-number {
   font-size: 20px;
 }
-.theme-default .dropcap, .theme-default .h1, .theme-default .h2, .theme-default .h3, .theme-default .h4, .theme-default .h5, .theme-default .h6, .theme-default .heading {
+.theme-default .h1 {
+  font-family: "adelle-sans", sans-serif;
   font-weight: bold;
-}
-.theme-default .dropcap, .theme-default .h1 {
+  margin-top: 0;
   line-height: 3.75rem;
   margin-bottom: 1.875rem;
   font-size: 4.125em;
 }
-.theme-default .huge.h1, .theme-default .huge.dropcap {
+.theme-default .h1.huge {
   line-height: 4.125rem;
   margin-bottom: 2.0625rem;
   font-size: 3.75em;
 }
 @media all and (max-width: 768px) {
-  .theme-default .dropcap, .theme-default .h1 {
+  .theme-default .h1 {
     font-size: 2.25em;
     line-height: 2.5rem;
   }
 }
 .theme-default .h2 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
   line-height: 3.3125rem;
   margin-bottom: 1.65625rem;
   font-size: 3em;
@@ -2760,21 +2313,33 @@ blockquote .theme-default p {
   }
 }
 .theme-default .h3 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
   line-height: 2.5rem;
   margin-bottom: 1.25rem;
   font-size: 2.25em;
 }
 .theme-default .h4 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
   line-height: 2.0625rem;
   margin-bottom: 1.03125rem;
   font-size: 1.875em;
 }
 .theme-default .h5 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
   line-height: 1.625rem;
   margin-bottom: 0.8125rem;
   font-size: 1.5em;
 }
 .theme-default .h6 {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
   line-height: 1.375rem;
   margin-bottom: 0.6875rem;
   font-size: 1.25em;
@@ -2794,6 +2359,7 @@ p + .theme-default .heading-dashed {
 .theme-default .heading-brushed {
   line-height: 1.625rem;
   margin-bottom: 0.8125rem;
+  font-family: "freight-text-pro", serif;
   margin-bottom: 2.375rem;
   padding-bottom: 1rem;
   text-align: center;
@@ -2809,32 +2375,44 @@ p + .theme-default .heading-dashed {
 p + .theme-default .heading-brushed {
   margin-top: 2.5rem;
 }
-.theme-default .blockquote, .theme-default blockquote,
-.theme-default blockquote p,
-blockquote .theme-default p {
+.theme-default .subheading {
+  font-family: "adelle-sans", sans-serif;
+  font-size: 1.25em;
+  height: 1.5;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+.theme-default blockquote, .theme-default .blockquote {
+  font-style: italic;
   font-size: 1.875em;
   line-height: 2.375rem;
   margin: 1.25rem 0;
   text-align: center;
 }
-.theme-default .figure, .theme-default figure {
+.theme-default figure, .theme-default .figure {
   margin: 0;
   text-align: center;
 }
-.theme-default .figcaption, .theme-default figcaption {
+.theme-default .figcaption {
   margin: 0.625rem 0 1.25rem;
   font-size: 0.875em;
   color: #999999;
   text-align: center;
 }
-.theme-default .pre, .theme-default pre {
-  width: 100%;
+.theme-default pre, .theme-default .pre {
+  font-family: "adelle-sans", sans-serif;
   display: block;
-  font-family: "adelle-sans";
+  width: 100%;
   white-space: pre-wrap;
   font-style: italic;
 }
 .theme-default .dropcap {
+  font-family: "adelle-sans", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 3.75rem;
+  margin-bottom: 1.875rem;
+  font-size: 4.125em;
   float: left;
   margin-right: 10px;
   margin-bottom: 0;
@@ -2846,6 +2424,252 @@ blockquote .theme-default p {
   border-left: 0.3125rem solid #ff5510;
   color: #ff5510;
   margin-bottom: 1.25rem;
+}
+.theme-default input[type="text"],
+.theme-default input[type="email"],
+.theme-default input[type="password"],
+.theme-default .input {
+  height: 2.5rem;
+  padding: 0 0.625rem;
+}
+.theme-default select {
+  height: 2.5rem;
+  padding: 0.625rem;
+}
+.theme-default textarea {
+  padding: 0.625rem;
+}
+.theme-default [data-count-target] {
+  padding-right: 2.5rem;
+}
+.theme-default .textarea-counter {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 8px 12px;
+  text-align: right;
+  font-family: monospace;
+  letter-spacing: -1px;
+  color: #01b69b;
+  pointer-events: none;
+}
+.theme-default .textarea-counter.is-negative {
+  color: red;
+}
+textarea.no-highlight ~ .theme-default .textarea-counter {
+  color: #999999;
+}
+.theme-default select,
+.theme-default textarea,
+.theme-default input[type="text"],
+.theme-default input[type="email"],
+.theme-default input[type="password"],
+.theme-default .input {
+  max-width: 100%;
+  background: white;
+  border: 0.125rem solid #d8d4c7;
+  border-radius: 0.1875rem;
+  outline: none;
+  font-family: sans-serif;
+  font-size: 0.9375em;
+}
+.theme-default select:focus,
+.theme-default textarea:focus,
+.theme-default input[type="text"]:focus,
+.theme-default input[type="email"]:focus,
+.theme-default input[type="password"]:focus,
+.theme-default .input:focus {
+  border-color: #00aced;
+}
+.theme-default select.is-valid,
+.theme-default textarea.is-valid,
+.theme-default input[type="text"].is-valid,
+.theme-default input[type="email"].is-valid,
+.theme-default input[type="password"].is-valid,
+.theme-default .input.is-valid {
+  border-color: #01b69b;
+}
+.theme-default select.no-highlight, .no-highlight .theme-default select,
+.theme-default textarea.no-highlight, .no-highlight
+.theme-default textarea,
+.theme-default input[type="text"].no-highlight, .no-highlight
+.theme-default input[type="text"],
+.theme-default input[type="email"].no-highlight, .no-highlight
+.theme-default input[type="email"],
+.theme-default input[type="password"].no-highlight, .no-highlight
+.theme-default input[type="password"],
+.theme-default .input.no-highlight, .no-highlight
+.theme-default .input {
+  border-color: #d8d4c7;
+}
+.theme-default input[type="text"][data-validations],
+.theme-default input[type="email"][data-validations],
+.theme-default input[type="password"][data-validations],
+.theme-default .input[data-validations] {
+  padding-right: 2.25rem;
+  background-image: url(image-path("icons/glyphs/validation-todo-20x20.svg"));
+  background-repeat: no-repeat;
+  background-position: right 0.5rem top 0.5rem;
+}
+.theme-default input[type="text"][data-validations].is-valid,
+.theme-default input[type="email"][data-validations].is-valid,
+.theme-default input[type="password"][data-validations].is-valid,
+.theme-default .input[data-validations].is-valid {
+  background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
+}
+.theme-default input[type="text"][data-validations].is-filled.is-invalid,
+.theme-default input[type="email"][data-validations].is-filled.is-invalid,
+.theme-default input[type="password"][data-validations].is-filled.is-invalid,
+.theme-default .input[data-validations].is-filled.is-invalid {
+  background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
+}
+[data-validation-icons="false"] .theme-default input[type="text"][data-validations], [data-validation-icons="false"]
+.theme-default input[type="email"][data-validations], [data-validation-icons="false"]
+.theme-default input[type="password"][data-validations], [data-validation-icons="false"]
+.theme-default .input[data-validations] {
+  background-image: none;
+}
+.theme-default .control-group {
+  margin-bottom: 1.25rem;
+}
+.theme-default .control-group:last-child {
+  margin-bottom: 0;
+}
+.theme-default .control-group label,
+.theme-default legend,
+.theme-default .control-label {
+  display: inline-block;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
+}
+.theme-default .controls-inline label,
+.theme-default .controls-inline input,
+.theme-default .controls-inline .input,
+.theme-default .controls-inline select {
+  display: inline-block;
+  width: auto;
+}
+.theme-default .controls-inline label {
+  display: block;
+  margin-right: 0.625rem;
+}
+.theme-default input[type="radio"],
+.theme-default input[type="checkbox"] {
+  display: block;
+  float: left;
+  margin-top: 0.1875rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+@media all and (max-width: 768px) {
+  .theme-default input[type="radio"],
+  .theme-default input[type="checkbox"] {
+    margin-top: 0.3125rem;
+  }
+}
+.theme-default input[type="radio"] + label,
+.theme-default input[type="checkbox"] + label {
+  display: block;
+  margin-bottom: 0;
+  overflow: hidden;
+  font-weight: 500;
+  cursor: pointer;
+}
+.theme-default input[type="text"],
+.theme-default input[type="email"],
+.theme-default input[type="password"],
+.theme-default textarea,
+.theme-default select,
+.theme-default .input {
+  width: 100%;
+}
+.theme-default input[type="text"].tiny,
+.theme-default input[type="email"].tiny,
+.theme-default input[type="password"].tiny,
+.theme-default textarea.tiny,
+.theme-default select.tiny,
+.theme-default .input.tiny {
+  width: 6.25rem;
+}
+.theme-default input[type="text"].small,
+.theme-default input[type="email"].small,
+.theme-default input[type="password"].small,
+.theme-default textarea.small,
+.theme-default select.small,
+.theme-default .input.small {
+  width: 8.75rem;
+}
+.theme-default input[type="text"].medium,
+.theme-default input[type="email"].medium,
+.theme-default input[type="password"].medium,
+.theme-default textarea.medium,
+.theme-default select.medium,
+.theme-default .input.medium {
+  width: 11.25rem;
+}
+.theme-default select.smallest {
+  width: auto;
+}
+.theme-default .control-groups-spaced-small .control-group {
+  margin-bottom: 0.75301rem;
+}
+.theme-default .error {
+  display: block;
+  margin-top: 0.3125rem;
+  color: #ff4a00;
+  font-size: 0.875em;
+}
+.theme-default .labels-infield {
+  display: block;
+  position: relative;
+}
+.theme-default .labels-infield label {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0.75rem;
+  line-height: 2.5rem;
+  margin: 0;
+  font-size: 0.875em;
+  font-weight: normal;
+  color: #555555;
+  cursor: text;
+}
+.theme-default .labels-infield label:after {
+  content: ":";
+}
+.theme-default .labels-infield input::-webkit-input-placeholder {
+  color: white;
+}
+.theme-default .labels-infield input::-moz-placeholder {
+  color: white;
+}
+.theme-default .labels-infield input:-ms-input-placeholder {
+  color: white;
+}
+.theme-default .labels-infield input::placeholder {
+  color: white;
+}
+.theme-default .labels-infield.input-is-focused label, .theme-default .labels-infield.input-is-dirty label {
+  top: -0.3125rem;
+  line-height: 0.625rem;
+  left: auto;
+  right: 0.625rem;
+  padding: 0 0.25rem;
+  background: white;
+  font-size: 0.75em;
+}
+.theme-default .labels-infield.input-is-focused label:after, .theme-default .labels-infield.input-is-dirty label:after {
+  content: "";
+}
+.theme-default .labels-infield.input-is-focused label {
+  color: #0092c9;
+}
+.theme-default .labels-infield.input-is-valid label {
+  color: #01927d;
+}
+.theme-default .labels-infield.input-is-invalid.input-is-filled label {
+  color: #db4000;
 }
 .theme-default .icon-alarm:before {
   content: "\e645";
@@ -3084,201 +2908,6 @@ blockquote .theme-default p {
 .theme-default [class*=" icon-"] + .label {
   margin-left: 0.25rem;
 }
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  height: 2.5rem;
-  padding: 0 0.625rem;
-}
-.theme-default .select, .theme-default select {
-  height: 2.5rem;
-  padding: 0.625rem;
-}
-.theme-default .textarea, .theme-default textarea {
-  padding: 0.625rem;
-}
-.theme-default .textarea-counter {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding: 8px 12px;
-  text-align: right;
-  font-family: monospace;
-  letter-spacing: -1px;
-  color: #01b69b;
-  pointer-events: none;
-}
-.theme-default .is-negative.textarea-counter {
-  color: red;
-}
-textarea.no-highlight ~ .theme-default .textarea-counter {
-  color: #999999;
-}
-.theme-default .input-field, .theme-default select,
-.theme-default textarea,
-.theme-default input[type="text"],
-.theme-default input[type="email"],
-.theme-default input[type="password"],
-.theme-default .input {
-  max-width: 100%;
-  background: white;
-  border: 0.125rem solid #d8d4c7;
-  border-radius: 0.1875rem;
-  outline: none;
-  font-family: sans-serif;
-  font-size: 0.9375em;
-  width: 100%;
-}
-.theme-default .input-field.tiny, .theme-default select.tiny,
-.theme-default textarea.tiny,
-.theme-default input.tiny[type="text"],
-.theme-default input.tiny[type="email"],
-.theme-default input.tiny[type="password"],
-.theme-default .tiny.input {
-  width: 6.25rem;
-}
-.theme-default .input-field.small, .theme-default select.small,
-.theme-default textarea.small,
-.theme-default input.small[type="text"],
-.theme-default input.small[type="email"],
-.theme-default input.small[type="password"],
-.theme-default .small.input {
-  width: 8.75rem;
-}
-.theme-default .input-field.medium, .theme-default select.medium,
-.theme-default textarea.medium,
-.theme-default input.medium[type="text"],
-.theme-default input.medium[type="email"],
-.theme-default input.medium[type="password"],
-.theme-default .medium.input {
-  width: 11.25rem;
-}
-.theme-default .input-field:focus, .theme-default select:focus,
-.theme-default textarea:focus,
-.theme-default input[type="text"]:focus,
-.theme-default input[type="email"]:focus,
-.theme-default input[type="password"]:focus,
-.theme-default .input:focus {
-  border-color: #00aced;
-}
-.theme-default .input-field.is-valid, .theme-default select.is-valid,
-.theme-default textarea.is-valid,
-.theme-default input.is-valid[type="text"],
-.theme-default input.is-valid[type="email"],
-.theme-default input.is-valid[type="password"],
-.theme-default .is-valid.input {
-  border-color: #01b69b;
-}
-.theme-default .input-field.is-filled.is-invalid, .theme-default select.is-filled.is-invalid,
-.theme-default textarea.is-filled.is-invalid,
-.theme-default input.is-filled.is-invalid[type="text"],
-.theme-default input.is-filled.is-invalid[type="email"],
-.theme-default input.is-filled.is-invalid[type="password"],
-.theme-default .is-filled.is-invalid.input {
-  border-color: #ff4a00;
-}
-.theme-default .input-field.no-highlight, .theme-default select.no-highlight,
-.theme-default textarea.no-highlight,
-.theme-default input.no-highlight[type="text"],
-.theme-default input.no-highlight[type="email"],
-.theme-default input.no-highlight[type="password"],
-.theme-default .no-highlight.input, .no-highlight .theme-default .input-field, .no-highlight .theme-default select,
-.no-highlight .theme-default textarea,
-.no-highlight .theme-default input[type="text"],
-.no-highlight .theme-default input[type="email"],
-.no-highlight .theme-default input[type="password"],
-.no-highlight .theme-default .input, .no-highlight .theme-default select,
-.no-highlight .theme-default textarea {
-  border-color: #d8d4c7;
-}
-.theme-default .field-validate[data-validations], .theme-default input[data-validations][type="text"],
-.theme-default input[data-validations][type="email"],
-.theme-default input[data-validations][type="password"],
-.theme-default [data-validations].input {
-  padding-right: 2.25rem;
-  background-image: url(image-path("icons/glyphs/validation-todo-20x20.svg"));
-  background-repeat: no-repeat;
-  background-position: right 0.5rem top 0.5rem;
-}
-.theme-default .field-validate[data-validations].is-valid, .theme-default input[data-validations].is-valid[type="text"],
-.theme-default input[data-validations].is-valid[type="email"],
-.theme-default input[data-validations].is-valid[type="password"],
-.theme-default [data-validations].is-valid.input {
-  background-image: url(image-path("icons/glyphs/validation-tick-20x20.svg"));
-}
-.theme-default .field-validate[data-validations].is-filled.is-invalid, .theme-default input[data-validations].is-filled.is-invalid[type="text"],
-.theme-default input[data-validations].is-filled.is-invalid[type="email"],
-.theme-default input[data-validations].is-filled.is-invalid[type="password"],
-.theme-default [data-validations].is-filled.is-invalid.input {
-  background-image: url(image-path("icons/glyphs/validation-error-20x20.svg"));
-}
-[data-validation-icons="false"] .theme-default .field-validate[data-validations], [data-validation-icons="false"] .theme-default input[data-validations][type="text"],
-[data-validation-icons="false"] .theme-default input[data-validations][type="email"],
-[data-validation-icons="false"] .theme-default input[data-validations][type="password"],
-[data-validation-icons="false"] .theme-default [data-validations].input {
-  background-image: none;
-}
-.theme-default .control-group {
-  margin-bottom: 1.25rem;
-}
-.theme-default .control-group:last-child {
-  margin-bottom: 0;
-}
-.theme-default .stacked-layout, .control-group .theme-default label, .theme-default .control-group label,
-.theme-default legend,
-.theme-default .control-label {
-  display: inline-block;
-  margin-bottom: 0.625rem;
-  font-weight: 600;
-}
-.theme-default .controls-inline label,
-.theme-default .controls-inline input,
-.theme-default .controls-inline input[type="text"],
-.theme-default .controls-inline input[type="email"],
-.theme-default .controls-inline input[type="password"],
-.theme-default .controls-inline .input,
-.theme-default .controls-inline select {
-  display: inline-block;
-  width: auto;
-}
-.theme-default .controls-inline label {
-  margin-right: 0.625rem;
-}
-.theme-default .radio, .theme-default input[type="radio"],
-.theme-default input[type="checkbox"] {
-  display: block;
-  float: left;
-  margin-top: 0.1875rem;
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-@media all and (max-width: 768px) {
-  .theme-default .radio, .theme-default input[type="radio"],
-  .theme-default input[type="checkbox"] {
-    margin-top: 0.3125rem;
-  }
-}
-.theme-default .radio + label, .theme-default input[type="radio"] + label,
-.theme-default input[type="checkbox"] + label {
-  display: block;
-  margin-bottom: 0;
-  overflow: hidden;
-  font-weight: 500;
-  cursor: pointer;
-}
-.theme-default .select.smallest, .theme-default select.smallest {
-  width: auto;
-}
-.theme-default .control-groups-spaced-small .control-group {
-  margin-bottom: 0.75301rem;
-}
-.theme-default .error {
-  display: block;
-  margin-top: 0.3125rem;
-  color: #ff4a00;
-  font-size: 0.875em;
-}
 .theme-default .ol, .theme-default ol {
   list-style: none;
   margin-left: 0;
@@ -3393,6 +3022,21 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 .theme-default .button.inverted.button.hollow:hover, .theme-default .button.inverted.button.hollow:active {
   background: rgba(255, 255, 255, 0.1);
 }
+.theme-default .button.hover {
+  border: none;
+  background: none;
+  transition: 0.3s;
+  text-transform: none;
+}
+.theme-default .button.hover:hover {
+  background: #f6f5f1;
+  box-shadow: 0 3px #e8e5db;
+}
+.theme-default .button.hover:active {
+  background: #ffce35;
+  box-shadow: 0 3px #ffc511;
+  transition: none;
+}
 .theme-default .button-share-facebook {
   background-color: #3b5998;
 }
@@ -3401,15 +3045,6 @@ textarea.no-highlight ~ .theme-default .textarea-counter {
 }
 .theme-default .button-share-email {
   background-color: #d8d4c7;
-}
-.theme-default .button.hover {
-  border: none;
-  background: none;
-  transition: 0.3s;
-  text-transform: none;
-}
-.theme-default .button.hover:active {
-  transition: none;
 }
 .theme-default .button.disabled,
 .theme-default .button[disabled],
