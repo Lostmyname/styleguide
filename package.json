@@ -1,6 +1,6 @@
 {
   "name": "lmn.jester.component.button",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Lost My Name component for creating buttons",
   "author": "barneyfoxuk",
   "main": "sass/_button.scss",
@@ -47,11 +47,9 @@
     "merge-stream": "^0.1.7",
     "mocha": "^2.0.1",
     "should": "^4.2.0",
-    "jscs": "^1.8.1",
     "vinyl-source-stream": "^1.0.0",
     "gulp-file-include": "^0.7.1",
-    "lodash": "^2.4.1",
-    "vinyl-source-stream": "^1.0.0"
+    "lodash": "^2.4.1"
   },
   "license": "MIT"
 }
