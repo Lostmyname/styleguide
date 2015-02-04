@@ -1,0 +1,56 @@
+.demo-grid {
+  .row {
+    margin-bottom: 5px;
+  }
+
+  .col {
+    background-color: #{map-get($palette, 'neutral')};
+  
+    > div {
+      background-color: #{map-get($palette, 'primary')};
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.demo-margin {
+  .box {
+    display: inline-block;
+    background-color: #{map-get($palette, 'tequila')};
+
+    > div {
+      width: 100px;
+      height: 100px;
+      background-color: #{map-get($palette, 'chocolate')};
+    }
+  }
+}
+
+.demo-padding {
+  .box {
+    display: inline-block;
+    background-color: #{map-get($palette, 'neutral')};
+
+    > div {
+      width: 100px;
+      height: 100px;
+      background-color: #{map-get($palette, 'primary')};
+    }
+  }
+}
+
+.demo-border {
+  .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #{map-get($palette, 'neutral')};
+    border-color: #{map-get($palette, 'cloud')};
+    border-style: solid;
+  }
+}

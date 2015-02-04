@@ -7,25 +7,12 @@ $supports-box-shadow: true !default;
 
 
 
-
 /*
- * Font-face
- *========================================
- * Sass doesn't like nester font-face declarations so we have to load themes' 
- * ff declarations up here 
- *
- */
-@import "../../node_modules/lmn.jester.theme.default/src/base/font/font-face";
-
-
-
-/*
- * Config and utilities
+ * Deafult Theme - Default
  *========================================
  */
-@import "../../node_modules/lmn.jester.helper/sass/functions";
-@import "../../node_modules/lmn.jester.theme.default/src/variables";
-@import "../../node_modules/lmn.jester.helper/sass/mixins";
+
+@import "../../node_modules/lmn.jester.theme.default/src/styles";
 
 
 
@@ -35,46 +22,58 @@ $supports-box-shadow: true !default;
  *========================================
  */
 
+@import "../../node_modules/lmn.jester.component.button/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.collapsible/src/scss/base/styles";
 @import "../../node_modules/lmn.jester.component.colour/src/scss/jester.component.colour";
-@import "../../node_modules/lmn.jester.component.button/src/scss/jester.component.button";
-@import "../../node_modules/lmn.jester.component.divider/src/scss/jester.component.divider";
-@import "../../node_modules/lmn.jester.component.swiper/src/scss/jester.component.swiper";
-@import "../../node_modules/lmn.jester.component.tab/src/scss/jester.component.tab";
-@import "../../node_modules/lmn.jester.component.gallery/src/scss/jester.component.gallery.simple";
-@import "../../node_modules/lmn.jester.component.switch/src/scss/jester.component.switch";
-@import "../../node_modules/lmn.jester.component.panel/src/scss/jester.component.panel";
-@import "../../node_modules/lmn.jester.component.video/src/scss/jester.component.video";
+@import "../../node_modules/lmn.jester.component.divider/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.gallery/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.panel/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.swiper/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.switch/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.tab/src/scss/base/styles";
+@import "../../node_modules/lmn.jester.component.video/src/scss/base/styles";
 
 
 
 /*
- * Deafult Theme - Default
+ * Local Components
  *========================================
  */
 
-@import "../../node_modules/lmn.jester.theme.default/src/jester.theme.default";
+@import "../components/code-block/scss/styles";
+@import "../components/demo/scss/styles";
+@import "../components/nav/scss/styles";
+
 
 
 
 /*
- * Sub Theme - Styleguide
+ * Default theme
  *========================================
  */
 
-.theme-styleguide {
-  @import "../../node_modules/lmn.jester.theme.styleguide/src/jester.theme.styleguide";
-}
+@import "../../node_modules/lmn.jester.component.button/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.collapsible/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.divider/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.gallery/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.panel/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.swiper/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.switch/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.tab/src/scss/theme.default/styles";
+@import "../../node_modules/lmn.jester.component.video/src/scss/theme.default/styles";
+
 
 
 
 /*
- * Sub Theme - Default
+ * Styleguide theme
  *========================================
  */
 
-.theme-default {
-  @import "../../node_modules/lmn.jester.theme.default/src/jester.theme.default";
-}
+@import "../../node_modules/lmn.jester.component.divider/src/scss/theme.styleguide/styles";
+
+
+
 
 
 
