@@ -1,6 +1,6 @@
 {
   "name": "lmn.jester.component.button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lost My Name component for creating buttons",
   "author": "barneyfoxuk",
   "main": "sass/_button.scss",
