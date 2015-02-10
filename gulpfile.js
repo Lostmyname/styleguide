@@ -25,10 +25,10 @@ gulp.task('auto-reload',       getTask('auto-reload'));
 gulp.task('js',                getTask('js'));
 gulp.task('scss',              getTask('scss'));
 gulp.task('fonts',             getTask('fonts'));
-gulp.task('fingerprint',       getTask('fingerprint'));
 gulp.task('responsive-images', getTask('responsive-images'));
 gulp.task('optimise-svgs',     getTask('optimise-svgs'));
 gulp.task('file-include',      getTask('file-include'));
+gulp.task('deploy',            getTask('deploy'));
 
 gulp.task('images',  ['responsive-images', 'optimise-svgs']);
 gulp.task('build',   ['js', 'scss', 'images', 'fonts', 'file-include']);
