@@ -17,23 +17,6 @@ $supports-box-shadow: true !default;
 
 
 
-/*
- * Global Components
- *========================================
- */
-
-@import "../../node_modules/lmn.jester.component.button/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.collapsible/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.colour/src/scss/jester.component.colour";
-@import "../../node_modules/lmn.jester.component.divider/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.gallery/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.panel/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.swiper/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.switch/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.tab/src/scss/base/styles";
-@import "../../node_modules/lmn.jester.component.video/src/scss/base/styles";
-
-
 
 /*
  * Local Components
@@ -43,25 +26,6 @@ $supports-box-shadow: true !default;
 @import "../components/code-block/scss/styles";
 @import "../components/demo/scss/styles";
 @import "../components/nav/scss/styles";
-
-
-
-
-/*
- * Default theme
- *========================================
- */
-
-@import "../../node_modules/lmn.jester.component.button/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.collapsible/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.divider/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.gallery/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.panel/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.swiper/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.switch/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.tab/src/scss/theme.default/styles";
-@import "../../node_modules/lmn.jester.component.video/src/scss/theme.default/styles";
-
 
 
 
