@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { Button } from '../components/button';
+import { Button } from '../components';
 
 export const Buttons = React.createClass({
   render: function() {
