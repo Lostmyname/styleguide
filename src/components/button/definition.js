@@ -8,12 +8,12 @@ export default {
     {
       "name": "mode",
       "type": "oneOf",
-      "value": ["raised"]
+      "value": ["raised", "flat"]
     },
     {
       "name": "type",
       "type": "oneOf",
-      "value": ["primary", "alert"]
+      "value": ["primary", "alert", "secondary"]
     }
   ]
 }

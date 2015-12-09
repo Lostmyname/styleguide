@@ -1,33 +1,34 @@
 'use strict'
 
 import React from 'react';
+import { Option } from '../option';
 
 export const Select = React.createClass({
   // propTypes: {
   //   value: React.PropTypes.string
   // },
 
-  getInitialState: function () {
-    return {
-      value: this.props.value
-    };
-  },
+  // getInitialState: function () {
+  //   return {
+  //     value: this.props.value
+  //   };
+  // },
 
-  onchange: function (event) {
-    this.setState({
-      value: event.currentTarget.value
-    });
-
+  onChange: function (event) {
     if (this.props.onChange) {
       this.props.onChange(event.currentTarget.value);
     }
   },
 
-  render() {
+  render: function () {
+    var options = this.props.options.map((item, index) => {
+      return <Option value={item} key={index}>{item}</Option>
+    });
+
     return (
-      <select>
-        <input onChange={this.onchange} value={this.state.value} />
+      <select onChange={this.onChange}>
+       {options}
       </select>
-    )
+    );
   }
 });

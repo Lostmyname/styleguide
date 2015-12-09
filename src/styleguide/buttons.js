@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { Button, TextInput } from '../components';
+import { Button, TextInput, Select } from '../components';
+import buttonDefinition from '../components/button/definition';
 
 export const Buttons = React.createClass({
   onTextChange: function (value) {
@@ -11,16 +12,30 @@ export const Buttons = React.createClass({
     });
   },
 
-  onEnter: function (value) {
+  onTypeChange: function (value) {
     this.setState({
       type: value
     });
   },
 
+  onModeChange: function (value) {
+    this.setState({
+      mode: value
+    });
+  },
+
+  getDefaultProps: function () {
+    return {
+      modes: buttonDefinition.propTypes[1].value,
+      types: buttonDefinition.propTypes[2].value
+    };
+  },
+
   getInitialState: function () {
     return {
       text: 'this is a button',
-      type: 'alert'
+      mode: this.props.modes[0],
+      type: this.props.types[0]
     };
   },
 
@@ -34,11 +49,14 @@ export const Buttons = React.createClass({
             <TextInput onChange={this.onTextChange} value={this.state.text} />
           </div>
           <div className="col col-lg-4">
-            <TextInput onEnter={this.onEnter} value="alert" />
+            <Select options={this.props.types} onChange={this.onTypeChange} value="alert" />
+          </div>
+          <div className="col col-lg-4">
+            <Select options={this.props.modes} onChange={this.onModeChange} value="raised" />
           </div>
         </div>
         <div className="sm-mar-b">
-          <Button text={this.state.text} type={this.state.type} mode="raised" />
+          <Button text={this.state.text} type={this.state.type} mode={this.state.mode} />
         </div>
       </div>
     );

@@ -2,5 +2,6 @@
 
 import { Button } from './button';
 import { TextInput } from './text-input';
+import { Select } from './select';
 
-export { Button, TextInput }
+export { Button, TextInput, Select }
