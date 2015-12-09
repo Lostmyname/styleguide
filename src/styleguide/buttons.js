@@ -11,13 +11,13 @@ export const Buttons = React.createClass({
         <h1>Buttons</h1>
         <h2>Types</h2>
         <div className="sm-mar-b">
-          <Button mode="raised">Default button</Button>
+          <Button text="Default button" mode="raised" />
         </div>
         <div className="sm-mar-b">
-          <Button type="alert" mode="raised">Alert button</Button>
+          <Button text="Alert button" type="alert" mode="raised" />
         </div>
         <div className="sm-mar-b">
-          <Button type="primary" mode="raised">Primary button</Button>
+          <Button text="Primary button" type="primary" mode="raised" />
         </div>
       </div>
     );

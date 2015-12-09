@@ -18,9 +18,11 @@ export const Button = React.createClass({
     return (
       <div>
         <button className={className} onClick={this.handleOnClick}>
-          {this.props.children}
+          {this.props.text}
         </button>
       </div>
     );
   }
 });
+
+window.Button = Button;
