@@ -4,6 +4,12 @@ import React from 'react';
 
 export const Button = React.createClass({
 
+  propTypes: {
+    text: React.PropTypes.string,
+    mode: React.PropTypes.oneOf(['raised']),
+    type: React.PropTypes.oneOf(['alert', 'primary'])
+  },
+
   handleOnClick: function () {
     if(this.props.onClick) {
       this.props.onClick();
