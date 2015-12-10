@@ -6,7 +6,7 @@ import { Option } from '../option';
 export const Select = React.createClass({
   onChange: function (event) {
     if (this.props.onChange) {
-      this.props.onChange(event.currentTarget.value);
+      this.props.onChange(this.props.name, event.currentTarget.value);
     }
   },
 

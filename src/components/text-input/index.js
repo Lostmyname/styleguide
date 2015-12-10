@@ -16,7 +16,7 @@ export const TextInput = React.createClass({
   onEnter: function (event) {
     if (event.keyCode === 13 && this.props.onEnter) {
       if (this.props.onEnter) {
-        this.props.onEnter(this.state.value);
+        this.props.onEnter(this.props.name, this.state.value);
       }
     }
   },
@@ -27,7 +27,7 @@ export const TextInput = React.createClass({
     });
 
     if (this.props.onChange) {
-      this.props.onChange(event.currentTarget.value);
+      this.props.onChange(this.props.name, event.currentTarget.value);
     }
   },
 

@@ -7,22 +7,10 @@ import buttonDefinition from '../components/button/definition';
 import { getDefaults, getOptions } from '../utils/definitions';
 
 export const Buttons = React.createClass({
-  onTextChange: function (value) {
-    this.setState({
-      text: value
-    });
-  },
-
-  onTypeChange: function (value) {
-    this.setState({
-      type: value
-    });
-  },
-
-  onButtonStyleChange: function (value) {
-    this.setState({
-      buttonStyle: value
-    });
+  onOptionChange: function (name, value) {
+    var newState = {};
+    newState[name] = value;
+    this.setState(newState);
   },
 
   getDefaultProps: function () {
@@ -40,13 +28,13 @@ export const Buttons = React.createClass({
         <h2>Example</h2>
         <div className="row md-mar-b">
           <div className="col col-lg-4">
-            <TextInput onChange={this.onTextChange} value={this.state.text} />
+            <TextInput name="text" onChange={this.onOptionChange} value={this.state.text} />
           </div>
           <div className="col col-lg-4">
-            <Select options={this.props.type} onChange={this.onTypeChange} value={this.props.type} />
+            <Select name="type" options={this.props.type} onChange={this.onOptionChange} value={this.props.type} />
           </div>
           <div className="col col-lg-4">
-            <Select options={this.props.buttonStyle} onChange={this.onButtonStyleChange} value={this.props.buttonStyle} />
+            <Select name="buttonStyle" options={this.props.buttonStyle} onChange={this.onOptionChange} value={this.props.buttonStyle} />
           </div>
         </div>
         <div className="sm-mar-b">
