@@ -18,7 +18,7 @@ export const Buttons = React.createClass({
     });
   },
 
-  onModeChange: function (value) {
+  onButtonStyleChange: function (value) {
     this.setState({
       mode: value
     });
@@ -26,7 +26,7 @@ export const Buttons = React.createClass({
 
   getDefaultProps: function () {
     return {
-      modes: buttonDefinition.propTypes[1].value,
+      buttonStyle: buttonDefinition.propTypes[1].value,
       types: buttonDefinition.propTypes[2].value
     };
   },
@@ -34,7 +34,7 @@ export const Buttons = React.createClass({
   getInitialState: function () {
     return {
       text: 'this is a button',
-      mode: this.props.modes[0],
+      buttonStyle: this.props.buttonStyle[0],
       type: this.props.types[0]
     };
   },
@@ -49,14 +49,14 @@ export const Buttons = React.createClass({
             <TextInput onChange={this.onTextChange} value={this.state.text} />
           </div>
           <div className="col col-lg-4">
-            <Select options={this.props.types} onChange={this.onTypeChange} value="alert" />
+            <Select options={this.props.types} onChange={this.onTypeChange} value={this.props.type} />
           </div>
           <div className="col col-lg-4">
-            <Select options={this.props.modes} onChange={this.onModeChange} value="raised" />
+            <Select options={this.props.buttonStyle} onChange={this.onButtonStyleChange} value='{this.props.buttonStyle}' />
           </div>
         </div>
         <div className="sm-mar-b">
-          <Button text={this.state.text} type={this.state.type} mode={this.state.mode} />
+          <Button text={this.state.text} type={this.state.type} mode={this.state.buttonStyle} />
         </div>
       </div>
     );

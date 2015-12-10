@@ -3,10 +3,11 @@ export default {
   "propTypes": [
     {
       "name": "test",
-      "type": "string"
+      "type": "string",
+      "valie": "This is a button"
     },
     {
-      "name": "mode",
+      "name": "buttonStyle",
       "type": "oneOf",
       "value": ["raised", "flat"]
     },
