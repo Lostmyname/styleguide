@@ -128,7 +128,8 @@ gulp.task('watchers', gulp.series('js-watch', function () {
   });
 
   browserSync.init(files, {
-    server: path.join('./public')
+    server: path.join('./public'),
+    port: 4000
   });
 }));
 

@@ -8,8 +8,12 @@ import buttonDefinition from './components/button/definition';
 var App = React.createClass({
   render: function() {
     return (
-      <div className="container">
-        <Buttons definition={buttonDefinition} />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col col-lg-12">
+            <Buttons definition={buttonDefinition} />
+          </div>
+        </div>
       </div>
     );
   }

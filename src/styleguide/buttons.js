@@ -4,6 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Button, TextInput, Select } from '../components';
 import buttonDefinition from '../components/button/definition';
+import { getDefaults, getOptions } from '../utils/definitions';
 
 export const Buttons = React.createClass({
   onTextChange: function (value) {
@@ -20,23 +21,16 @@ export const Buttons = React.createClass({
 
   onButtonStyleChange: function (value) {
     this.setState({
-      mode: value
+      buttonStyle: value
     });
   },
 
   getDefaultProps: function () {
-    return {
-      buttonStyle: buttonDefinition.propTypes[1].value,
-      types: buttonDefinition.propTypes[2].value
-    };
+   return getOptions(buttonDefinition);
   },
 
   getInitialState: function () {
-    return {
-      text: 'this is a button',
-      buttonStyle: this.props.buttonStyle[0],
-      type: this.props.types[0]
-    };
+    return getDefaults(buttonDefinition);
   },
 
   render: function() {
@@ -49,10 +43,10 @@ export const Buttons = React.createClass({
             <TextInput onChange={this.onTextChange} value={this.state.text} />
           </div>
           <div className="col col-lg-4">
-            <Select options={this.props.types} onChange={this.onTypeChange} value={this.props.type} />
+            <Select options={this.props.type} onChange={this.onTypeChange} value={this.props.type} />
           </div>
           <div className="col col-lg-4">
-            <Select options={this.props.buttonStyle} onChange={this.onButtonStyleChange} value='{this.props.buttonStyle}' />
+            <Select options={this.props.buttonStyle} onChange={this.onButtonStyleChange} value={this.props.buttonStyle} />
           </div>
         </div>
         <div className="sm-mar-b">

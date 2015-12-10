@@ -2,17 +2,17 @@ export default {
   "name": "Button",
   "propTypes": [
     {
-      "name": "test",
+      "propName": "text",
       "type": "string",
-      "valie": "This is a button"
+      "value": "This is a button"
     },
     {
-      "name": "buttonStyle",
+      "propName": "buttonStyle",
       "type": "oneOf",
       "value": ["raised", "flat"]
     },
     {
-      "name": "type",
+      "propName": "type",
       "type": "oneOf",
       "value": ["primary", "alert", "secondary"]
     }
