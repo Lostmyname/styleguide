@@ -24,25 +24,27 @@ export const Buttons = React.createClass({
   render: function() {
     return (
       <div>
-        <h1>Buttons</h1>
-        <h2>Example</h2>
-        <div className="row md-mar-b">
-          <div className="col col-lg-4">
-            <TextInput name="text" onChange={this.onOptionChange} value={this.state.text} />
+        <section className="row md-pad color-bg-white">
+          <h1 className="md-mar-b">Button</h1>
+          <hr className="md-mar-b" />
+          <h3 className="h6">Options</h3>
+          <div className="row md-mar-b">
+            <div className="col col-lg-4">
+              <TextInput name="text" onChange={this.onOptionChange} value={this.state.text} />
+            </div>
+            <div className="col col-lg-4">
+              <Select name="type" options={this.props.type} onChange={this.onOptionChange} value={this.props.type} />
+            </div>
+            <div className="col col-lg-4">
+              <Select name="buttonStyle" options={this.props.buttonStyle} onChange={this.onOptionChange} value={this.props.buttonStyle} />
+            </div>
           </div>
-          <div className="col col-lg-4">
-            <Select name="type" options={this.props.type} onChange={this.onOptionChange} value={this.props.type} />
+        </section>
+        <section className="row md-pad">
+          <div className="sm-mar-b">
+            <Button text={this.state.text} type={this.state.type} buttonStyle={this.state.buttonStyle} />
           </div>
-          <div className="col col-lg-4">
-            <Select name="buttonStyle" options={this.props.buttonStyle} onChange={this.onOptionChange} value={this.props.buttonStyle} />
-          </div>
-        </div>
-        <div className="sm-mar-b">
-          <Button text={this.state.text} type={this.state.type} buttonStyle={this.state.buttonStyle} />
-        </div>
-        <div className="sm-mar-b">
-          <Button text={this.state.text} type="primary" buttonStyle="raised" />
-        </div>
+        </section>
       </div>
     );
   }
