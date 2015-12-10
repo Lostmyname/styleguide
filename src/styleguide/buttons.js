@@ -38,7 +38,10 @@ export const Buttons = React.createClass({
           </div>
         </div>
         <div className="sm-mar-b">
-          <Button text={this.state.text} type={this.state.type} mode={this.state.buttonStyle} />
+          <Button text={this.state.text} type={this.state.type} buttonStyle={this.state.buttonStyle} />
+        </div>
+        <div className="sm-mar-b">
+          <Button text={this.state.text} type="primary" buttonStyle="raised" />
         </div>
       </div>
     );

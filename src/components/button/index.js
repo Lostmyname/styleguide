@@ -1,14 +1,12 @@
 'use strict'
 
 import React from 'react';
+import buttonDefinition from './definition';
+import { getPropTypes } from '../../utils/definitions';
 
 export const Button = React.createClass({
 
-  propTypes: {
-    text: React.PropTypes.string,
-    mode: React.PropTypes.oneOf(['raised', 'flat']),
-    type: React.PropTypes.oneOf(['alert', 'primary'])
-  },
+  propTypes: getPropTypes(buttonDefinition),
 
   handleOnClick: function () {
     if(this.props.onClick) {
@@ -18,7 +16,7 @@ export const Button = React.createClass({
 
   render: function() {
     let className = 'button';
-    className += ' button--'+this.props.mode;
+    className += ' button--'+this.props.buttonStyle;
     className += ' button--'+this.props.type;
 
     return (
