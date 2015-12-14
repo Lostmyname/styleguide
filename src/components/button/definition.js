@@ -9,7 +9,7 @@ export default {
     {
       "propName": "buttonStyle",
       "type": "oneOf",
-      "value": ["raised", "flat", "hollow"]
+      "value": ["raised", "flat"]
     },
     {
       "propName": "type",

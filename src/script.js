@@ -3,7 +3,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Buttons } from './styleguide/buttons';
-import buttonDefinition from './components/button/definition';
 
 var App = React.createClass({
   render: function() {
@@ -11,7 +10,7 @@ var App = React.createClass({
       <div className="container-fluid">
         <div className="row">
           <div className="col col-lg-12">
-            <Buttons definition={buttonDefinition} />
+            <Buttons />
           </div>
         </div>
       </div>

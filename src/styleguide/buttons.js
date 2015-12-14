@@ -14,7 +14,7 @@ export const Buttons = React.createClass({
   },
 
   getDefaultProps: function () {
-   return getOptions(buttonDefinition);
+    return getOptions(buttonDefinition);
   },
 
   getInitialState: function () {

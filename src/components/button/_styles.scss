@@ -1,0 +1,374 @@
+// @import "../../node_modules/lmn.jester.helper/sass/functions";
+// @import "../../node_modules/lmn.jester.helper/sass/mixins";
+
+$height-button: rem(40)!default;
+$font-size-button: rem(20)!default;
+
+// Button helpers
+
+@mixin button($background, $color, $background-hover: false) {
+  background: $background;
+  color: $color;
+
+  &:not(.button--loading):hover,
+  &:not(.button--loading):active {
+    color: $color;
+    background: darken($background, 10%);
+  }
+
+  &.button--hollow {
+    background: none;
+    border: 2px solid $background;
+    color: $background;
+    transition: background 0.3s;
+    &:hover,
+    &:active {
+      background: rgba($background, 0.1);
+    }
+  }
+
+  &:focus {
+    background: darken($background, 10%);
+  }
+}
+
+@mixin button-raised($background) {
+  @include button($background, white);
+  position: relative;
+  font-family: $font-sans-serif;
+  border-bottom: 4px solid darken($background, 6%);
+  box-shadow: 4px 5px 0 rgba(0,0,0,0.2);
+  background-position: center;
+  height: auto;
+
+  &:not(.loading):hover {
+    background-color: darken($background, 3%);
+
+    // border-bottom-color: darken(map-get($palette, 'crusta'), 2%);
+    border-bottom-width: 3px;
+    top: 1px;
+    margin-bottom: 1px;
+  }
+
+  &:not(.loading):active {
+    border-bottom-width: 2px;
+    box-shadow: 1px 2px 0 rgba(0,0,0,0.2);
+    top: 4px;
+    margin-bottom: 2px;
+  }
+}
+
+// Core
+.button {
+  display: inline-block;
+  line-height: 1;
+  padding: ($height-button - $font-size-button) / 2 rem(16);
+  vertical-align: top;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: rem(3);
+  box-shadow: none;
+  font-size: $font-size-button;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  span ~ i,
+  i ~ span {
+    margin-left: rem(4);
+  }
+}
+
+
+.button-share-facebook {
+  @include button(map-get($palette, 'facebook'), map-get($palette, 'white'));
+}
+
+.button-share-twitter {
+  @include button(map-get($palette, 'twitter'), map-get($palette, 'white'));
+}
+
+.button-share-email {
+  @include button(map-get($palette, 'neutral'), map-get($palette, 'white'));
+}
+
+.button.raised.loading {
+  text-indent: -9999px;
+  background-image: image-url('button-primary-spinner-large.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: default;
+}
+
+
+
+.button--big {
+  @extend .big;
+  padding: ($height-button * 1.3 - $font-size-button) / 2 rem(20);
+}
+
+.button--wide {
+  @extend .wide;
+  padding-left: rem(30);
+  padding-right: rem(30);
+}
+.button--tiny {
+  font-size: 14px;
+}
+.button--raised.button--tiny {
+  padding: rem(7) rem(13);
+  font-size: 14px;
+}
+
+
+.button--square {
+  padding: ($height-button - $font-size-button) / 2;
+}
+
+
+.button--share {
+  display: block;
+  width: rem(42);
+  height: rem(42);
+  line-height: rem(42);
+  text-align: center;
+  color: white;
+}
+
+/*
+ * Button States
+ */
+
+
+// Hover state
+.button:hover {
+  transition: background-position 0.1s linear;
+}
+
+/*
+ * Make a button, not look like a button
+ */
+.buttonless {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+
+
+// Disabled state
+.button.disabled,
+.button[disabled],
+.button[disabled]:hover,
+.button.disabled:hover {
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+/* LMN */
+
+@mixin button-raised($background) {
+  @include button($background, white);
+  position: relative;
+  font-family: $font-sans-serif;
+  border-bottom: 4px solid darken($background, 6%);
+  box-shadow: 4px 5px 0 rgba(0,0,0,0.2);
+  background-position: center;
+
+  &:not(.button--loading):hover {
+    background-color: darken($background, 3%);
+
+    // border-bottom-color: darken(map-get($palette, 'crusta'), 2%);
+    border-bottom-width: 3px;
+    top: 1px;
+    margin-bottom: 1px;
+  }
+
+  &:not(.button--loading):active {
+    border-bottom-width: 2px;
+    box-shadow: 1px 2px 0 rgba(0,0,0,0.2);
+    top: 4px;
+    margin-bottom: 2px;
+  }
+}
+
+.button {
+  @include button(map-get($palette, 'neutral'), map-get($palette, 'text'));
+  font-family: $font-sans-serif;
+}
+
+.button--primary {
+  @include button(map-get($palette, 'primary'), white);
+}
+
+.button--raised {
+  @include button-raised(map-get($palette, 'crusta'));
+  height: auto;
+}
+
+.button--raised.button--primary {
+  @include button-raised(map-get($palette, 'primary'))
+}
+
+.button--loading {
+  text-indent: -9999px;
+  background-image: image-url('button-alert-spinner-large.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: default;
+}
+
+.button--primary.button--loading {
+  background-image: image-url('button-primary-spinner-large.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button--secondary {
+  @include button(map-get($palette, 'secondary'), white);
+}
+
+.button--alert {
+  @include button(map-get($palette, 'alert'), white);
+}
+
+.button--inverted {
+  @include button(white, map-get($palette, 'text'));
+}
+
+.button--hollow {
+  @include button(white, map-get($palette, 'white'));
+}
+
+.button--neutral {
+  @include button(map-get($palette, 'neutral'), 'white');
+}
+
+.button-share-smoke-signal {
+  @include button(map-get($palette, 'cafe-royale'), map-get($palette, 'white'));
+}
+
+
+.button--share-facebook {
+  @include button(map-get($palette, 'facebook'), map-get($palette, 'white'));
+}
+
+.button--share-twitter {
+  @include button(map-get($palette, 'twitter'), map-get($palette, 'white'));
+}
+
+.button--share-email {
+  @include button(map-get($palette, 'neutral'), map-get($palette, 'white'));
+}
+
+
+
+.button--raised.button--loading {
+  text-indent: -9999px;
+  background-image: image-url('button-alert-spinner-large.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: default;
+}
+
+.button--raised.button--primary.button--loading {
+  text-indent: -9999px;
+  background-image: image-url('button-primary-spinner-large.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: default;
+}
+
+
+.button.button--raised.button--shadowless,
+.button.button--raised.button--shadowless:hover {
+  box-shadow: none;
+}
+
+
+.button--hover {
+  border: none;
+  background: none;
+  transition: background-color 0.3s;
+  text-transform: none;
+  &:hover {
+    background: darken(map-get($palette, 'narvik'), 10%);
+    transition: background-color 0.3s;
+  }
+  &:active {
+    background: map-get($palette, 'sunglow');
+    transition: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.button--popup {
+  background: none;
+  border-radius: 50%;
+  color: map-get($palette, 'primary');
+  height: rem(16);
+  padding: rem(0);
+  width: rem(16);
+  line-height: 1;
+  font-size: rem(16);
+  vertical-align: middle;
+
+  span {
+    display: block;
+    position: relative;
+    margin-top: 1px;
+  }
+
+  &:hover,
+  &:focus,
+  &:not(.button--loading):hover,
+  &:not(.button--loading):focus {
+    background: none;
+    color: darken(map-get($palette, 'primary'), 3%);
+  }
+
+  &:active,
+  &:not(.button--loading):active {
+    background: none;
+    color: map-get($palette, 'text');
+    outline: none;
+  }
+}
+
+
+
+
+/* TJH */
+
+.button.transparent {
+  @include button(transparent, map-get($palette, 'white-smoke'));
+  border-width: 1px;
+  border-style: solid;
+  border-color: map-get($palette, 'white-smoke');
+  border-radius: rem(3);
+  
+  text-transform: capitalize;
+  font-weight: normal;
+  font-size: rem(18);
+
+  &:not(.loading):hover,
+  &:not(.loading):active,
+  &.current {
+    background: rgba(80,114,118,0.8);
+    border-color: rgba(80,114,118,0.8);
+  }
+}
