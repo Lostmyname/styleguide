@@ -2,6 +2,7 @@
 
 var path = require('path');
 var gulp = require('gulp');
+var plugins = require('gulp-load-plugins')();
 var _ = require('lodash');
 var findModulesDown = require('find-node-modules-down');
 var getLmnTask = require('lmn-gulp-tasks');
@@ -19,6 +20,10 @@ if (process.env.ASSET_HOST) {
   assetHost = 'https://' + process.env.ASSET_HOST + '/';
 } else {
   assetHost = '/';
+}
+
+function getCustomTask(name) {
+  return require('./gulp-tasks/' + name)(gulp, plugins);
 }
 
 function getTask(name, options) {
@@ -143,3 +148,4 @@ gulp.task('build', gulp.series(
 ));
 
 gulp.task('default', gulp.series('lint', 'build', 'watchers'));
+gulp.task('deploy', getCustomTask('deploy'));

@@ -1,5 +1,5 @@
 node_modules
 demo/build
 *.log
-public
+public/assets
 aws.json

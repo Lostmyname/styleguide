@@ -30,6 +30,8 @@
   "devDependencies": {
     "babelify": "^6.2.0",
     "browser-sync": "^2.7.9",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-s3": "^0.3.0",
     "karma": "^0.13.9",
     "karma-babel-preprocessor": "^5.2.1",
     "karma-browserify": "^4.3.0",
